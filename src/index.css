@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FAF8F5] text-[#1a2e26] font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-serif {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom glassmorphism and subtle animations */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark-glass {
+  background: rgba(10, 52, 36, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f3;
+}
+::-webkit-scrollbar-thumb {
+  background: #0c5c3c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #083c27;
+}
