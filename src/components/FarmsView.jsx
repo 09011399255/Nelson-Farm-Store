@@ -123,8 +123,7 @@ export default function FarmsView({
 
           <ScrollReveal duration={750} distance={20}>
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full border border-[#a3e635]/40 bg-[#a3e635]/15 text-[#a3e635] text-[11px] sm:text-xs font-semibold tracking-wide mb-4 sm:mb-5 backdrop-blur-sm">
-                <Sparkles size={14} className="text-[#a3e635]" />
+              <div className="inline-flex items-center px-3.5 sm:px-4 py-1.5 rounded-full border border-[#a3e635]/40 bg-[#a3e635]/15 text-[#a3e635] text-[11px] sm:text-xs font-semibold tracking-wide mb-4 sm:mb-5 backdrop-blur-sm">
                 <span>Operational Facilities & Divisions</span>
               </div>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-sans font-bold tracking-tight mb-4 sm:mb-6 leading-[1.14] sm:leading-[1.12]">
@@ -144,9 +143,6 @@ export default function FarmsView({
 
           {/* Quick jump pills - synced with scenic slider */}
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 mt-8 sm:mt-10 pt-5 sm:pt-6 border-t border-emerald-900/50">
-            <span className="text-xs font-bold text-[#a3e635] uppercase tracking-wider mr-1 sm:mr-2 w-full sm:w-auto">
-              Jump to division:
-            </span>
             {LIVESTOCK_SECTORS.map((sec, idx) => {
               const isCurrent = idx === currentSlide;
               return (
