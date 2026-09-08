@@ -35,8 +35,8 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
   return (
     <footer className="bg-[#072418] text-emerald-100/90 font-sans relative">
       {/* Overlapping Floating CTA Card (Matching Reference Screenshot) */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 -mt-28 sm:-mt-36 mb-16 relative z-20">
-        <div className="relative rounded-[32px] sm:rounded-[40px] overflow-hidden shadow-2xl min-h-[380px] sm:min-h-[420px] flex items-center justify-center text-center p-8 sm:p-14 border border-emerald-500/20 group">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 -mt-24 sm:-mt-36 mb-12 sm:mb-16 relative z-20">
+        <div className="relative rounded-2xl sm:rounded-[40px] overflow-hidden shadow-2xl min-h-[300px] sm:min-h-[420px] flex items-center justify-center text-center p-6 sm:p-14 border border-emerald-500/20 group">
           {/* Background Photo */}
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
@@ -48,10 +48,10 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
 
           {/* Content */}
           <div className="relative z-10 max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-sans font-bold text-white tracking-tight mb-4">
+            <h2 className="text-2xl sm:text-5xl lg:text-6xl font-sans font-bold text-white tracking-tight mb-3 sm:mb-4">
               Ready To Get Started?
             </h2>
-            <p className="text-sm sm:text-base lg:text-lg text-emerald-100/90 leading-relaxed max-w-2xl mx-auto mb-8 font-normal">
+            <p className="text-xs sm:text-base lg:text-lg text-emerald-100/90 leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8 font-normal">
               Join thousands of families, chefs, and grocers who are
               transforming their tables with certified bio-secure livestock,
               expert support, and trusted farm solutions.
@@ -64,11 +64,11 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
                   ? onOpenInquiry("Free Order & Supply Consultation")
                   : onNavigate("home", "contact")
               }
-              className="group/btn inline-flex items-center gap-3 bg-[#a3e635] hover:bg-[#84cc16] text-[#072418] font-bold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-full shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="group/btn inline-flex items-center justify-center gap-3 bg-[#a3e635] hover:bg-[#84cc16] text-[#072418] font-bold text-xs sm:text-sm uppercase tracking-wider px-6 sm:px-8 py-3.5 sm:py-4 rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
             >
               <span>Book a Free Consultation</span>
-              <div className="w-7 h-7 rounded-full bg-white text-[#072418] flex items-center justify-center font-bold group-hover/btn:translate-x-0.5 transition-transform shadow-sm">
-                <ArrowRight size={14} className="stroke-[3]" />
+              <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white text-[#072418] flex items-center justify-center font-bold group-hover/btn:translate-x-0.5 transition-transform shadow-sm">
+                <ArrowRight size={13} className="stroke-[3]" />
               </div>
             </button>
           </div>

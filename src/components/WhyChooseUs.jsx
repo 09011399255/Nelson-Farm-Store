@@ -52,15 +52,15 @@ export default function WhyChooseUs() {
   }
 
   return (
-    <section className="py-20 lg:py-28 bg-white relative">
+    <section className="py-14 sm:py-20 lg:py-28 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="max-w-3xl mb-16">
-          <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-[#072418] tracking-tight leading-[1.15] mb-4">
+        <div className="max-w-3xl mb-10 sm:mb-16">
+          <h2 className="font-sans text-2xl sm:text-4xl lg:text-5xl font-bold text-[#072418] tracking-tight leading-[1.18] sm:leading-[1.15] mb-3 sm:mb-4">
             Good farming starts with <br />
             <span className="text-[#1ca350]">uncompromising care.</span>
           </h2>
-          <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-stone-600 text-xs sm:text-base leading-relaxed">
             We hold ourselves to elevated bio-security and husbandry standards
             so you never have to wonder where your food came from or how it was
             raised.
@@ -68,12 +68,12 @@ export default function WhyChooseUs() {
         </div>
 
         {/* 4 Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
-          <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-emerald-950/10 shadow-sm hover:shadow-xl hover:border-[#a3e635]/60 transition-all duration-300 group">
-            <span className="w-9 h-9 rounded-full bg-[#a3e635]/20 text-[#072418] font-bold text-sm flex items-center justify-center border border-[#a3e635]/40 mb-5 group-hover:bg-[#a3e635] group-hover:text-[#072418] transition-colors">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-14 sm:mb-24">
+          <div className="p-5 sm:p-7 rounded-2xl sm:rounded-3xl bg-[#FAF8F5] border border-emerald-950/10 shadow-sm hover:shadow-xl hover:border-[#a3e635]/60 transition-all duration-300 group">
+            <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#a3e635]/20 text-[#072418] font-bold text-xs sm:text-sm flex items-center justify-center border border-[#a3e635]/40 mb-4 sm:mb-5 group-hover:bg-[#a3e635] group-hover:text-[#072418] transition-colors">
               01
             </span>
-            <h3 className="font-sans text-lg font-bold text-[#072418] mb-2 group-hover:text-[#1ca350] transition-colors">
+            <h3 className="font-sans text-base sm:text-lg font-bold text-[#072418] mb-1.5 sm:mb-2 group-hover:text-[#1ca350] transition-colors">
               Quality Livestock
             </h3>
             <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-normal">
@@ -82,11 +82,11 @@ export default function WhyChooseUs() {
             </p>
           </div>
 
-          <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-emerald-950/10 shadow-sm hover:shadow-xl hover:border-[#a3e635]/60 transition-all duration-300 group">
-            <span className="w-9 h-9 rounded-full bg-[#a3e635]/20 text-[#072418] font-bold text-sm flex items-center justify-center border border-[#a3e635]/40 mb-5 group-hover:bg-[#a3e635] group-hover:text-[#072418] transition-colors">
+          <div className="p-5 sm:p-7 rounded-2xl sm:rounded-3xl bg-[#FAF8F5] border border-emerald-950/10 shadow-sm hover:shadow-xl hover:border-[#a3e635]/60 transition-all duration-300 group">
+            <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#a3e635]/20 text-[#072418] font-bold text-xs sm:text-sm flex items-center justify-center border border-[#a3e635]/40 mb-4 sm:mb-5 group-hover:bg-[#a3e635] group-hover:text-[#072418] transition-colors">
               02
             </span>
-            <h3 className="font-sans text-lg font-bold text-[#072418] mb-2 group-hover:text-[#1ca350] transition-colors">
+            <h3 className="font-sans text-base sm:text-lg font-bold text-[#072418] mb-1.5 sm:mb-2 group-hover:text-[#1ca350] transition-colors">
               Responsible Practice
             </h3>
             <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-normal">
@@ -95,11 +95,11 @@ export default function WhyChooseUs() {
             </p>
           </div>
 
-          <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-emerald-950/10 shadow-sm hover:shadow-xl hover:border-[#a3e635]/60 transition-all duration-300 group">
-            <span className="w-9 h-9 rounded-full bg-[#a3e635]/20 text-[#072418] font-bold text-sm flex items-center justify-center border border-[#a3e635]/40 mb-5 group-hover:bg-[#a3e635] group-hover:text-[#072418] transition-colors">
+          <div className="p-5 sm:p-7 rounded-2xl sm:rounded-3xl bg-[#FAF8F5] border border-emerald-950/10 shadow-sm hover:shadow-xl hover:border-[#a3e635]/60 transition-all duration-300 group">
+            <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#a3e635]/20 text-[#072418] font-bold text-xs sm:text-sm flex items-center justify-center border border-[#a3e635]/40 mb-4 sm:mb-5 group-hover:bg-[#a3e635] group-hover:text-[#072418] transition-colors">
               03
             </span>
-            <h3 className="font-sans text-lg font-bold text-[#072418] mb-2 group-hover:text-[#1ca350] transition-colors">
+            <h3 className="font-sans text-base sm:text-lg font-bold text-[#072418] mb-1.5 sm:mb-2 group-hover:text-[#1ca350] transition-colors">
               Fresh Farm Products
             </h3>
             <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-normal">
@@ -108,11 +108,11 @@ export default function WhyChooseUs() {
             </p>
           </div>
 
-          <div className="p-7 rounded-3xl bg-[#FAF8F5] border border-emerald-950/10 shadow-sm hover:shadow-xl hover:border-[#a3e635]/60 transition-all duration-300 group">
-            <span className="w-9 h-9 rounded-full bg-[#a3e635]/20 text-[#072418] font-bold text-sm flex items-center justify-center border border-[#a3e635]/40 mb-5 group-hover:bg-[#a3e635] group-hover:text-[#072418] transition-colors">
+          <div className="p-5 sm:p-7 rounded-2xl sm:rounded-3xl bg-[#FAF8F5] border border-emerald-950/10 shadow-sm hover:shadow-xl hover:border-[#a3e635]/60 transition-all duration-300 group">
+            <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#a3e635]/20 text-[#072418] font-bold text-xs sm:text-sm flex items-center justify-center border border-[#a3e635]/40 mb-4 sm:mb-5 group-hover:bg-[#a3e635] group-hover:text-[#072418] transition-colors">
               04
             </span>
-            <h3 className="font-sans text-lg font-bold text-[#072418] mb-2 group-hover:text-[#1ca350] transition-colors">
+            <h3 className="font-sans text-base sm:text-lg font-bold text-[#072418] mb-1.5 sm:mb-2 group-hover:text-[#1ca350] transition-colors">
               Customer Focused
             </h3>
             <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-normal">
@@ -123,11 +123,11 @@ export default function WhyChooseUs() {
         </div>
 
         {/* 'Real Stories. Real Impact.' Testimonial Slider Section */}
-        <div className="pt-16 border-t border-emerald-950/10">
+        <div className="pt-10 sm:pt-16 border-t border-emerald-950/10">
           {/* Header Row: Title on Left, Prev/Next on Right */}
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 sm:mb-14 gap-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-14 gap-4 sm:gap-6">
             <div>
-              <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#072418] tracking-tight leading-[1.15]">
+              <h2 className="font-sans text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#072418] tracking-tight leading-[1.18] sm:leading-[1.15]">
                 Real Stories. <br />
                 Real Impact.
               </h2>
@@ -138,16 +138,16 @@ export default function WhyChooseUs() {
               <button
                 onClick={handlePrev}
                 aria-label="Previous testimonial"
-                className="w-12 h-12 rounded-full border border-stone-300 hover:border-[#072418] bg-white text-stone-700 hover:text-[#072418] flex items-center justify-center transition-all shadow-sm hover:shadow active:scale-95 focus:outline-none"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-stone-300 hover:border-[#072418] bg-white text-stone-700 hover:text-[#072418] flex items-center justify-center transition-all shadow-sm hover:shadow active:scale-95 focus:outline-none"
               >
-                <ArrowLeft size={18} />
+                <ArrowLeft size={16} />
               </button>
               <button
                 onClick={handleNext}
                 aria-label="Next testimonial"
-                className="w-12 h-12 rounded-full bg-[#a3e635] hover:bg-[#84cc16] text-[#072418] flex items-center justify-center transition-all shadow-sm hover:shadow-md active:scale-95 focus:outline-none font-bold"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#a3e635] hover:bg-[#84cc16] text-[#072418] flex items-center justify-center transition-all shadow-sm hover:shadow-md active:scale-95 focus:outline-none font-bold"
               >
-                <ArrowRight size={18} />
+                <ArrowRight size={16} />
               </button>
             </div>
           </div>
@@ -155,7 +155,7 @@ export default function WhyChooseUs() {
           {/* Carousel Viewport Container */}
           <div className="overflow-hidden px-1 py-4 -mx-1 -my-4">
             <div
-              className="flex gap-6 transition-transform duration-500 ease-out"
+              className="flex gap-4 sm:gap-6 transition-transform duration-500 ease-out"
               style={{ transform: transformStyle }}
             >
               {TESTIMONIALS.map((t, idx) => {
@@ -164,7 +164,7 @@ export default function WhyChooseUs() {
                   <div
                     key={t.id || idx}
                     onClick={() => setActiveIndex(idx)}
-                    className={`w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 transition-all duration-300 rounded-[28px] p-7 sm:p-8 flex flex-col justify-between cursor-pointer ${
+                    className={`w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 transition-all duration-300 rounded-2xl sm:rounded-[28px] p-5 sm:p-8 flex flex-col justify-between cursor-pointer ${
                       isActive
                         ? "bg-[#072418] text-white shadow-2xl border-2 border-[#a3e635]/40 scale-[1.01]"
                         : "bg-white text-stone-700 shadow-sm hover:shadow-md border border-stone-200/80 hover:border-stone-300"

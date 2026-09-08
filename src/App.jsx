@@ -59,9 +59,9 @@ export default function App() {
     <div className="min-h-screen flex flex-col font-sans bg-[#FAF8F5] text-stone-900 selection:bg-[#1ca350] selection:text-white relative">
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 bg-[#072418] text-white py-3.5 px-5 rounded-2xl shadow-2xl border border-amber-400/40 flex items-center gap-3 animate-fade-in">
-          <CheckCircle2 size={18} className="text-amber-400" />
-          <span className="text-sm font-semibold">{toastMessage}</span>
+        <div className="fixed bottom-6 left-4 right-4 sm:left-auto sm:right-6 z-50 max-w-sm mx-auto sm:mx-0 bg-[#072418] text-white py-3.5 px-5 rounded-2xl shadow-2xl border border-amber-400/40 flex items-center gap-3 animate-fade-in">
+          <CheckCircle2 size={18} className="text-amber-400 flex-shrink-0" />
+          <span className="text-xs sm:text-sm font-semibold">{toastMessage}</span>
         </div>
       )}
 

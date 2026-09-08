@@ -26,18 +26,18 @@ export default function ContactSection({ onSubmitSuccess }) {
   return (
     <section
       id="contact"
-      className="pt-12 sm:pt-16 lg:pt-20 pb-40 sm:pb-52 lg:pb-60 bg-[#FAF8F5] relative border-t border-emerald-950/10"
+      className="pt-10 sm:pt-16 lg:pt-20 pb-36 sm:pb-52 lg:pb-60 bg-[#FAF8F5] relative border-t border-emerald-950/10"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
           {/* Left Column: Simple, Authentic & Balanced */}
           <div className="lg:col-span-6 lg:pt-6">
-            <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#072418] tracking-tight leading-[1.14] mb-4">
+            <h2 className="font-sans text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#072418] tracking-tight leading-[1.18] sm:leading-[1.14] mb-3 sm:mb-4">
               Ready to order fresh <br className="hidden sm:inline" />
               from Nelson Farms?
             </h2>
 
-            <p className="text-stone-600 text-base sm:text-lg leading-relaxed mb-7 font-normal max-w-lg">
+            <p className="text-stone-600 text-sm sm:text-lg leading-relaxed mb-6 sm:mb-7 font-normal max-w-lg">
               Reach out to our farm desk to book live stock, fresh cuts, or
               commercial bulk supplies. We deliver daily across Lagos and Ogun
               State.
@@ -49,7 +49,7 @@ export default function ContactSection({ onSubmitSuccess }) {
                 href="https://wa.me/2348012345678?text=Hello%20Nelson%20Farms%2C%20I%20would%20like%20to%20place%20an%20order."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm sm:text-base py-3.5 px-7 rounded-full shadow-md hover:shadow-lg transition-all duration-200 group"
+                className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm sm:text-base py-3.5 px-6 sm:px-7 rounded-full shadow-md hover:shadow-lg transition-all duration-200 group w-full sm:w-auto"
               >
                 {/* Official WhatsApp Logo */}
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -66,7 +66,7 @@ export default function ContactSection({ onSubmitSuccess }) {
 
           {/* Right Column: Clean, Modern Form Card */}
           <div className="lg:col-span-6">
-            <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg border border-emerald-950/10">
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-lg border border-emerald-950/10">
               {submitted ? (
                 <div className="text-center py-10 px-4">
                   <div className="w-14 h-14 rounded-full bg-emerald-100 text-[#1ca350] mx-auto flex items-center justify-center mb-3.5">

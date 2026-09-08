@@ -29,14 +29,14 @@ export default function Navbar({ activeView, setActiveView, onOpenInquiry }) {
   return (
     <>
       {/* Top micro-bar for quick contact */}
-      <div className="bg-farm-darkest text-emerald-100/80 text-xs py-2.5 sm:py-3 px-4 sm:px-8 border-b border-emerald-950 flex justify-between items-center tracking-wide">
-        <div className="flex items-center gap-2">
-          <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span className="font-medium">
+      <div className="bg-farm-darkest text-emerald-100/80 text-[11px] sm:text-xs py-2 sm:py-2.5 px-3.5 sm:px-8 border-b border-emerald-950 flex justify-between items-center tracking-wide">
+        <div className="flex items-center gap-2 truncate">
+          <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
+          <span className="font-medium truncate sm:overflow-visible">
             Farm fresh deliveries available daily across Lagos & Ogun State
           </span>
         </div>
-        <div className="hidden sm:flex items-center gap-6">
+        <div className="hidden sm:flex items-center gap-6 flex-shrink-0">
           <a
             href="tel:+2348012345678"
             className="hover:text-emerald-300 transition-colors flex items-center gap-1.5 font-medium"
@@ -55,27 +55,27 @@ export default function Navbar({ activeView, setActiveView, onOpenInquiry }) {
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "glass-nav shadow-farm-md py-3.5 sm:py-4 border-b border-emerald-900/10"
-            : "bg-white/95 backdrop-blur-md py-5 sm:py-6 lg:py-7 border-b border-gray-100"
+            ? "glass-nav shadow-farm-md py-3 sm:py-3.5 border-b border-emerald-900/10"
+            : "bg-white/95 backdrop-blur-md py-3.5 sm:py-5 lg:py-6 border-b border-gray-100"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Brand Logo */}
           <button
             onClick={() => navigateTo("home")}
-            className="flex items-center gap-3 text-left group focus:outline-none"
+            className="flex items-center gap-2.5 sm:gap-3 text-left group focus:outline-none"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-farm-primary to-farm-dark text-white flex items-center justify-center font-serif text-xl font-bold shadow-farm-sm group-hover:scale-105 transition-transform duration-200 border border-emerald-700/30">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-farm-primary to-farm-dark text-white flex items-center justify-center font-serif text-lg sm:text-xl font-bold shadow-farm-sm group-hover:scale-105 transition-transform duration-200 border border-emerald-700/30 flex-shrink-0">
               <span className="text-emerald-300">◒</span>
             </div>
             <div>
-              <div className="text-xl font-bold tracking-tight text-farm-darkest flex items-center gap-1">
+              <div className="text-lg sm:text-xl font-bold tracking-tight text-farm-darkest flex items-center gap-1 leading-tight">
                 Nelson{" "}
                 <span className="font-serif italic font-normal text-farm-medium">
                   Farms
                 </span>
               </div>
-              <p className="text-[10px] uppercase font-bold tracking-widest text-emerald-800/80 -mt-0.5">
+              <p className="text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-emerald-800/80 -mt-0.5">
                 Livestock & Produce Store
               </p>
             </div>

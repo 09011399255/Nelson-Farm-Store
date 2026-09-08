@@ -5,14 +5,14 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
   return (
     <section
       id="about"
-      className="py-20 lg:py-28 bg-[#FAF8F5] relative overflow-hidden font-sans"
+      className="py-14 sm:py-20 lg:py-28 bg-[#FAF8F5] relative overflow-hidden font-sans"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Left Column (7 cols): Story, CTA Button, and Farm Landscape Visual */}
           <div className="lg:col-span-7 flex flex-col justify-between">
             <div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#072418] leading-[1.14] tracking-tight mb-5">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#072418] leading-[1.18] sm:leading-[1.14] tracking-tight mb-5">
                 Farming with purpose, <br className="hidden sm:block" />
                 <span className="text-[#1ca350]">
                   for a healthier, reliable future.
@@ -34,10 +34,10 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
               </p>
 
               {/* Action Buttons (Ecoland Style Pill) */}
-              <div className="flex flex-wrap items-center gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-8">
                 <button
                   onClick={onLearnMore}
-                  className="group inline-flex items-center gap-3 bg-[#072418] hover:bg-[#0d4628] text-white font-bold text-xs uppercase tracking-wider px-7 py-4 rounded-full shadow-md transition-all duration-200 transform hover:-translate-y-0.5"
+                  className="group inline-flex items-center justify-center gap-3 bg-[#072418] hover:bg-[#0d4628] text-white font-bold text-xs uppercase tracking-wider px-6 sm:px-7 py-3.5 sm:py-4 rounded-full shadow-md transition-all duration-200 transform hover:-translate-y-0.5 w-full sm:w-auto"
                 >
                   <span>Explore Farm Operations</span>
                   <div className="w-6 h-6 rounded-full bg-[#a3e635] text-[#072418] flex items-center justify-center group-hover:translate-x-0.5 transition-transform">
@@ -47,7 +47,7 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
 
                 <button
                   onClick={() => onOpenInquiry("Partner With Nelson Farms")}
-                  className="group inline-flex items-center gap-3 bg-white hover:bg-[#a3e635]/15 border border-[#a3e635] text-[#072418] font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-full transition-all duration-200 shadow-sm"
+                  className="group inline-flex items-center justify-center gap-3 bg-white hover:bg-[#a3e635]/15 border border-[#a3e635] text-[#072418] font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-full transition-all duration-200 shadow-sm w-full sm:w-auto"
                 >
                   <span>Partner With Us</span>
                   <div className="w-6 h-6 rounded-full bg-[#a3e635]/30 text-[#072418] flex items-center justify-center group-hover:translate-x-0.5 transition-transform">
@@ -57,24 +57,24 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
               </div>
             </div>
 
-            {/* Farm Landscape Image (Matching Reference Screenshot) */}
-            <div className="overflow-hidden rounded-[32px] shadow-farm-lg border-4 border-white relative group">
+            {/* Farm Landscape Image */}
+            <div className="overflow-hidden rounded-2xl sm:rounded-[32px] shadow-farm-lg border-2 sm:border-4 border-white relative group">
               <img
                 src="/about-farm.jpg"
                 alt="Nelson Farms Agricultural Landscape"
-                className="w-full h-[280px] sm:h-[340px] object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-[220px] sm:h-[340px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute bottom-4 left-4 bg-[#072418]/85 backdrop-blur-md text-white text-xs font-semibold px-4 py-2 rounded-full border border-[#a3e635]/40 flex items-center gap-2">
+              <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-[#072418]/85 backdrop-blur-md text-white text-[11px] sm:text-xs font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-[#a3e635]/40 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[#a3e635]"></span>
-                <span>Bio-Secure Farmlands • Lagos & Ogun State</span>
+                <span className="truncate">Bio-Secure Farmlands • Lagos & Ogun</span>
               </div>
             </div>
           </div>
 
           {/* Right Column (5 cols): Stacked Lime + Deep Green Cards */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            {/* Top Card: Fresh Eco Lime (Matching Reference Button Tone) */}
-            <div className="bg-[#a3e635] rounded-[32px] p-7 sm:p-8 shadow-lg text-[#072418] flex flex-col justify-between relative overflow-hidden">
+            {/* Top Card: Fresh Eco Lime */}
+            <div className="bg-[#a3e635] rounded-2xl sm:rounded-[32px] p-5 sm:p-8 shadow-lg text-[#072418] flex flex-col justify-between relative overflow-hidden">
               <div>
                 <div className="mb-4">
                   <span className="text-xs font-bold uppercase tracking-wider text-[#072418]/90">
@@ -100,7 +100,7 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
             </div>
 
             {/* Bottom Card: Deep Dark Forest Green */}
-            <div className="bg-[#072418] rounded-[32px] p-7 sm:p-8 text-white shadow-xl border border-emerald-800/40 flex flex-col justify-between">
+            <div className="bg-[#072418] rounded-2xl sm:rounded-[32px] p-5 sm:p-8 text-white shadow-xl border border-emerald-800/40 flex flex-col justify-between">
               <div>
                 {/* Checkmarked Bullet Points */}
                 <div className="space-y-3 mb-6">
