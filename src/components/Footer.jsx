@@ -12,6 +12,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { LIVESTOCK_SECTORS } from "../data/farmsData";
+import ScrollReveal from "./ScrollReveal";
 
 export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
   const [newsletterEmail, setNewsletterEmail] = useState("");
@@ -36,6 +37,11 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
     <footer className="bg-[#072418] text-emerald-100/90 font-sans relative">
       {/* Overlapping Floating CTA Card (Matching Reference Screenshot) */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 -mt-24 sm:-mt-36 mb-12 sm:mb-16 relative z-20">
+      <ScrollReveal
+        duration={800}
+        distance={24}
+        className="max-w-6xl mx-auto px-4 sm:px-6 -mt-24 sm:-mt-36 mb-12 sm:mb-16 relative z-20"
+      >
         <div className="relative rounded-2xl sm:rounded-[40px] overflow-hidden shadow-2xl min-h-[300px] sm:min-h-[420px] flex items-center justify-center text-center p-6 sm:p-14 border border-emerald-500/20 group">
           {/* Background Photo */}
           <div
@@ -74,9 +80,16 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
           </div>
         </div>
       </div>
+      </ScrollReveal>
 
       {/* Main Footer Links & Information Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16">
+      <ScrollReveal
+        delay={100}
+        duration={750}
+        distance={16}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 items-start">
           {/* Col 1: Brand Bio & Socials (3 cols) */}
           <div className="lg:col-span-3">
@@ -275,6 +288,7 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
           </div>
         </div>
       </div>
+      </ScrollReveal>
 
       {/* Bottom Sub-footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 border-t border-emerald-900/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-300/60">

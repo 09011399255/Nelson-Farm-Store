@@ -12,6 +12,7 @@ import {
   PhoneCall,
 } from "lucide-react";
 import { LIVESTOCK_SECTORS } from "../data/farmsData";
+import ScrollReveal from "./ScrollReveal";
 
 export default function FarmsView({
   onBackToHome,
@@ -57,6 +58,22 @@ export default function FarmsView({
             <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full border border-[#a3e635]/40 bg-[#a3e635]/15 text-[#a3e635] text-[11px] sm:text-xs font-semibold tracking-wide mb-3 sm:mb-4">
               <Sparkles size={14} className="text-[#a3e635]" />
               <span>Operational Facilities & Divisions</span>
+          <ScrollReveal duration={750} distance={20}>
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full border border-[#a3e635]/40 bg-[#a3e635]/15 text-[#a3e635] text-[11px] sm:text-xs font-semibold tracking-wide mb-3 sm:mb-4">
+                <Sparkles size={14} className="text-[#a3e635]" />
+                <span>Operational Facilities & Divisions</span>
+              </div>
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-sans font-bold tracking-tight mb-4 sm:mb-6 leading-[1.14] sm:leading-[1.12]">
+                Growing healthy livestock. <br />
+                <span className="text-[#1ca350]">Raising quality products.</span>
+              </h1>
+              <p className="text-sm sm:text-lg text-emerald-100/90 leading-relaxed max-w-2xl font-normal">
+                Tour the farming practices behind Nelson Farms Store. Each
+                division is built around bio-security, humane livestock handling,
+                and precision organic feeding to supply superior foods to Nigerian
+                households and businesses.
+              </p>
             </div>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-sans font-bold tracking-tight mb-4 sm:mb-6 leading-[1.14] sm:leading-[1.12]">
               Growing healthy livestock. <br />
@@ -69,6 +86,7 @@ export default function FarmsView({
               households and businesses.
             </p>
           </div>
+          </ScrollReveal>
 
           {/* Quick jump pills */}
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 mt-8 sm:mt-10 pt-5 sm:pt-6 border-t border-emerald-900/50">
@@ -95,8 +113,13 @@ export default function FarmsView({
             const isEven = index % 2 === 1;
             return (
               <article
+              <ScrollReveal
+                as="article"
                 key={sector.id}
                 id={sector.id}
+                delay={index * 60}
+                duration={750}
+                distance={20}
                 className="scroll-mt-28 bg-white rounded-2xl sm:rounded-3xl border border-emerald-950/10 shadow-md overflow-hidden p-5 sm:p-10 lg:p-12 hover:shadow-xl transition-all duration-300"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-14 items-center">
@@ -219,6 +242,7 @@ export default function FarmsView({
                   </div>
                 </div>
               </article>
+              </ScrollReveal>
             );
           })}
         </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 export default function ContactSection({ onSubmitSuccess }) {
   const [formData, setFormData] = useState({
@@ -32,6 +33,11 @@ export default function ContactSection({ onSubmitSuccess }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
           {/* Left Column: Simple, Authentic & Balanced */}
           <div className="lg:col-span-6 lg:pt-6">
+          <ScrollReveal
+            duration={750}
+            distance={20}
+            className="lg:col-span-6 lg:pt-6"
+          >
             <h2 className="font-sans text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#072418] tracking-tight leading-[1.18] sm:leading-[1.14] mb-3 sm:mb-4">
               Ready to order fresh <br className="hidden sm:inline" />
               from Nelson Farms?
@@ -63,9 +69,11 @@ export default function ContactSection({ onSubmitSuccess }) {
               </a>
             </div>
           </div>
+          </ScrollReveal>
 
           {/* Right Column: Clean, Modern Form Card */}
           <div className="lg:col-span-6">
+          <ScrollReveal delay={120} duration={750} distance={20} className="lg:col-span-6">
             <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-lg border border-emerald-950/10">
               {submitted ? (
                 <div className="text-center py-10 px-4">
@@ -207,6 +215,7 @@ export default function ContactSection({ onSubmitSuccess }) {
               )}
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
