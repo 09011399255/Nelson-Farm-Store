@@ -20,28 +20,24 @@ const FARM_HERO_SLIDES = [
     title: "Chicken & Poultry Division",
     subtitle: "Layers & Broilers",
     image: "/poultry-battery-cages.jpg",
-    tag: "Automated Clean Battery Cages",
   },
   {
     id: "piggery",
     title: "Commercial Piggery Division",
     subtitle: "Swine Breeding & Finishing",
     image: "/piggery-commercial.jpg",
-    tag: "Sanitary Swine Husbandry",
   },
   {
     id: "turkey",
     title: "Heritage Turkey Division",
     subtitle: "Free-Range Pasture",
     image: "/turkey-commercial.jpg",
-    tag: "Spacious Pasture Rearing",
   },
   {
     id: "fishery",
     title: "Aquaculture & Fishery Division",
     subtitle: "Concrete Flow-Through Ponds",
     image: "/fishery-commercial.jpg",
-    tag: "Aerated Borehole Water",
   },
 ];
 
@@ -58,11 +54,11 @@ export default function FarmsView({
 }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Auto-rotate hero slides every 5.5s
+  // Auto-rotate hero slides every 3s (faster, lively transition)
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % FARM_HERO_SLIDES.length);
-    }, 5500);
+    }, 3000);
     return () => clearInterval(timer);
   }, []);
 
@@ -94,7 +90,7 @@ export default function FarmsView({
         {FARM_HERO_SLIDES.map((slide, idx) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 bg-cover bg-right lg:bg-center transition-all duration-1000 transform ${
+            className={`absolute inset-0 bg-cover bg-right lg:bg-center transition-all duration-700 transform ${
               idx === currentSlide
                 ? "opacity-100 scale-100"
                 : "opacity-0 scale-105 pointer-events-none"
@@ -110,40 +106,19 @@ export default function FarmsView({
         {/* Subtle top/bottom vignette for cinematic atmosphere */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#072418]/70 via-transparent to-[#072418]/60"></div>
 
-        {/* Live Facility Badge in Hero */}
-        <div className="absolute bottom-6 right-4 sm:bottom-8 sm:right-8 hidden sm:flex items-center gap-3 bg-[#072418]/85 backdrop-blur-md px-4 py-2 rounded-2xl border border-white/10 shadow-lg z-20">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#a3e635] animate-pulse"></span>
-          <div className="text-left">
-            <span className="text-[10px] uppercase font-bold text-emerald-300 block tracking-wider">
-              Scenic Facility
-            </span>
-            <span className="text-xs font-bold text-white block">
-              {FARM_HERO_SLIDES[currentSlide].title}
-            </span>
-          </div>
-          <div className="flex items-center gap-1.5 ml-2 pl-3 border-l border-white/20">
-            {FARM_HERO_SLIDES.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrentSlide(i)}
-                aria-label={`View ${FARM_HERO_SLIDES[i].title}`}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  i === currentSlide
-                    ? "w-6 bg-[#a3e635]"
-                    : "w-2 bg-white/40 hover:bg-white/70"
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
+          {/* Subtle, non-competing navigation back link */}
           <button
             onClick={onBackToHome}
-            className="inline-flex items-center gap-2 text-[#a3e635] hover:text-white text-xs font-bold uppercase tracking-wider mb-6 sm:mb-8 transition-colors px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 shadow-sm"
+            className="group inline-flex items-center gap-2.5 text-emerald-200/80 hover:text-white text-xs font-semibold mb-5 sm:mb-6 transition-colors focus:outline-none"
           >
-            <ArrowLeft size={14} />
-            <span>Back to Home</span>
+            <span className="w-7 h-7 rounded-full bg-white/10 group-hover:bg-[#a3e635] text-[#a3e635] group-hover:text-[#072418] border border-white/15 flex items-center justify-center transition-all shadow-sm">
+              <ArrowLeft
+                size={13}
+                className="group-hover:-translate-x-0.5 transition-transform"
+              />
+            </span>
+            <span className="tracking-wide">Back to Home</span>
           </button>
 
           <ScrollReveal duration={750} distance={20}>
