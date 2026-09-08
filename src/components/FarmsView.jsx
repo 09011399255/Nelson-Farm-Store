@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -14,6 +14,37 @@ import {
 import { LIVESTOCK_SECTORS } from "../data/farmsData";
 import ScrollReveal from "./ScrollReveal";
 
+const FARM_HERO_SLIDES = [
+  {
+    id: "poultry",
+    title: "Chicken & Poultry Division",
+    subtitle: "Layers & Broilers",
+    image: "/poultry-battery-cages.jpg",
+    tag: "Automated Clean Battery Cages",
+  },
+  {
+    id: "piggery",
+    title: "Commercial Piggery Division",
+    subtitle: "Swine Breeding & Finishing",
+    image: "/piggery-commercial.jpg",
+    tag: "Sanitary Swine Husbandry",
+  },
+  {
+    id: "turkey",
+    title: "Heritage Turkey Division",
+    subtitle: "Free-Range Pasture",
+    image: "/turkey-commercial.jpg",
+    tag: "Spacious Pasture Rearing",
+  },
+  {
+    id: "fishery",
+    title: "Aquaculture & Fishery Division",
+    subtitle: "Concrete Flow-Through Ponds",
+    image: "/fishery-commercial.jpg",
+    tag: "Aerated Borehole Water",
+  },
+];
+
 const formatMetricLabel = (label) => {
   return label
     .replace(/([A-Z])/g, " $1")
@@ -25,8 +56,24 @@ export default function FarmsView({
   onOpenInquiry,
   selectedFarmId,
 }) {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto-rotate hero slides every 5.5s
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % FARM_HERO_SLIDES.length);
+    }, 5500);
+    return () => clearInterval(timer);
+  }, []);
+
   useEffect(() => {
     if (selectedFarmId) {
+      const matchedIdx = FARM_HERO_SLIDES.findIndex(
+        (s) => s.id === selectedFarmId,
+      );
+      if (matchedIdx !== -1) {
+        setCurrentSlide(matchedIdx);
+      }
       const el = document.getElementById(selectedFarmId);
       if (el) {
         setTimeout(
@@ -41,20 +88,59 @@ export default function FarmsView({
 
   return (
     <div className="bg-[#FAF8F5] min-h-screen font-sans">
-      {/* Farms Page Hero */}
-      <section className="relative py-14 sm:py-20 lg:py-28 bg-[#072418] text-white overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-25"
-          style={{
-            backgroundImage: `url('/hero-farm.jpg')`,
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#072418] via-[#072418]/80 to-transparent"></div>
+      {/* Farms Page Hero with Homepage Left-Side Gradient & Multi-Farm Scenic Backdrop */}
+      <section className="relative min-h-[500px] sm:min-h-[560px] lg:min-h-[620px] flex items-center py-14 sm:py-20 lg:py-24 bg-[#072418] text-white overflow-hidden">
+        {/* Dynamic Cross-Fading Panoramic Backgrounds (Poultry, Piggery, Turkey, Fishery) */}
+        {FARM_HERO_SLIDES.map((slide, idx) => (
+          <div
+            key={slide.id}
+            className={`absolute inset-0 bg-cover bg-right lg:bg-center transition-all duration-1000 transform ${
+              idx === currentSlide
+                ? "opacity-100 scale-100"
+                : "opacity-0 scale-105 pointer-events-none"
+            }`}
+            style={{
+              backgroundImage: `url('${slide.image}')`,
+            }}
+          />
+        ))}
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Deep dark forest-green mask from left to right (Matching Homepage Hero: zero text disturbance, vibrant scenery on right) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#072418] via-[#072418]/90 via-45% to-[#072418]/30 lg:to-transparent"></div>
+        {/* Subtle top/bottom vignette for cinematic atmosphere */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#072418]/70 via-transparent to-[#072418]/60"></div>
+
+        {/* Live Facility Badge in Hero */}
+        <div className="absolute bottom-6 right-4 sm:bottom-8 sm:right-8 hidden sm:flex items-center gap-3 bg-[#072418]/85 backdrop-blur-md px-4 py-2 rounded-2xl border border-white/10 shadow-lg z-20">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#a3e635] animate-pulse"></span>
+          <div className="text-left">
+            <span className="text-[10px] uppercase font-bold text-emerald-300 block tracking-wider">
+              Scenic Facility
+            </span>
+            <span className="text-xs font-bold text-white block">
+              {FARM_HERO_SLIDES[currentSlide].title}
+            </span>
+          </div>
+          <div className="flex items-center gap-1.5 ml-2 pl-3 border-l border-white/20">
+            {FARM_HERO_SLIDES.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentSlide(i)}
+                aria-label={`View ${FARM_HERO_SLIDES[i].title}`}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  i === currentSlide
+                    ? "w-6 bg-[#a3e635]"
+                    : "w-2 bg-white/40 hover:bg-white/70"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
           <button
             onClick={onBackToHome}
-            className="inline-flex items-center gap-2 text-[#a3e635] hover:text-white text-xs font-bold uppercase tracking-wider mb-6 sm:mb-8 transition-colors px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10"
+            className="inline-flex items-center gap-2 text-[#a3e635] hover:text-white text-xs font-bold uppercase tracking-wider mb-6 sm:mb-8 transition-colors px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 shadow-sm"
           >
             <ArrowLeft size={14} />
             <span>Back to Home</span>
@@ -62,7 +148,7 @@ export default function FarmsView({
 
           <ScrollReveal duration={750} distance={20}>
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full border border-[#a3e635]/40 bg-[#a3e635]/15 text-[#a3e635] text-[11px] sm:text-xs font-semibold tracking-wide mb-3 sm:mb-4">
+              <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full border border-[#a3e635]/40 bg-[#a3e635]/15 text-[#a3e635] text-[11px] sm:text-xs font-semibold tracking-wide mb-4 sm:mb-5 backdrop-blur-sm">
                 <Sparkles size={14} className="text-[#a3e635]" />
                 <span>Operational Facilities & Divisions</span>
               </div>
@@ -81,20 +167,35 @@ export default function FarmsView({
             </div>
           </ScrollReveal>
 
-          {/* Quick jump pills */}
+          {/* Quick jump pills - synced with scenic slider */}
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 mt-8 sm:mt-10 pt-5 sm:pt-6 border-t border-emerald-900/50">
             <span className="text-xs font-bold text-[#a3e635] uppercase tracking-wider mr-1 sm:mr-2 w-full sm:w-auto">
               Jump to division:
             </span>
-            {LIVESTOCK_SECTORS.map((sec) => (
-              <a
-                key={sec.id}
-                href={`#${sec.id}`}
-                className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-emerald-950/80 hover:bg-[#1ca350] border border-emerald-800/60 text-[11px] sm:text-xs font-bold text-white transition-all shadow-sm"
-              >
-                {sec.name}
-              </a>
-            ))}
+            {LIVESTOCK_SECTORS.map((sec, idx) => {
+              const isCurrent = idx === currentSlide;
+              return (
+                <button
+                  key={sec.id}
+                  onClick={() => {
+                    setCurrentSlide(idx);
+                    const el = document.getElementById(sec.id);
+                    if (el)
+                      el.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }}
+                  className={`px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold transition-all shadow-sm flex items-center gap-1.5 ${
+                    isCurrent
+                      ? "bg-[#a3e635] text-[#072418] border border-[#a3e635] font-extrabold shadow-md scale-105"
+                      : "bg-emerald-950/80 hover:bg-[#1ca350] border border-emerald-800/60 text-white/90"
+                  }`}
+                >
+                  {isCurrent && (
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#072418] animate-pulse" />
+                  )}
+                  <span>{sec.name}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>
