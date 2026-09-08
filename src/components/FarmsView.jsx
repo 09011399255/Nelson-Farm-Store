@@ -14,6 +14,12 @@ import {
 import { LIVESTOCK_SECTORS } from "../data/farmsData";
 import ScrollReveal from "./ScrollReveal";
 
+const formatMetricLabel = (label) => {
+  return label
+    .replace(/([A-Z])/g, " $1")
+    .replace(/^./, (str) => str.toUpperCase());
+};
+
 export default function FarmsView({
   onBackToHome,
   onOpenInquiry,
@@ -54,10 +60,6 @@ export default function FarmsView({
             <span>Back to Home</span>
           </button>
 
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full border border-[#a3e635]/40 bg-[#a3e635]/15 text-[#a3e635] text-[11px] sm:text-xs font-semibold tracking-wide mb-3 sm:mb-4">
-              <Sparkles size={14} className="text-[#a3e635]" />
-              <span>Operational Facilities & Divisions</span>
           <ScrollReveal duration={750} distance={20}>
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full border border-[#a3e635]/40 bg-[#a3e635]/15 text-[#a3e635] text-[11px] sm:text-xs font-semibold tracking-wide mb-3 sm:mb-4">
@@ -66,26 +68,17 @@ export default function FarmsView({
               </div>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-sans font-bold tracking-tight mb-4 sm:mb-6 leading-[1.14] sm:leading-[1.12]">
                 Growing healthy livestock. <br />
-                <span className="text-[#1ca350]">Raising quality products.</span>
+                <span className="text-[#1ca350]">
+                  Raising quality products.
+                </span>
               </h1>
               <p className="text-sm sm:text-lg text-emerald-100/90 leading-relaxed max-w-2xl font-normal">
                 Tour the farming practices behind Nelson Farms Store. Each
-                division is built around bio-security, humane livestock handling,
-                and precision organic feeding to supply superior foods to Nigerian
-                households and businesses.
+                division is built around bio-security, humane livestock
+                handling, and precision organic feeding to supply superior foods
+                to Nigerian households and businesses.
               </p>
             </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-sans font-bold tracking-tight mb-4 sm:mb-6 leading-[1.14] sm:leading-[1.12]">
-              Growing healthy livestock. <br />
-              <span className="text-[#1ca350]">Raising quality products.</span>
-            </h1>
-            <p className="text-sm sm:text-lg text-emerald-100/90 leading-relaxed max-w-2xl font-normal">
-              Tour the farming practices behind Nelson Farms Store. Each
-              division is built around bio-security, humane livestock handling,
-              and precision organic feeding to supply superior foods to Nigerian
-              households and businesses.
-            </p>
-          </div>
           </ScrollReveal>
 
           {/* Quick jump pills */}
@@ -112,7 +105,6 @@ export default function FarmsView({
           {LIVESTOCK_SECTORS.map((sector, index) => {
             const isEven = index % 2 === 1;
             return (
-              <article
               <ScrollReveal
                 as="article"
                 key={sector.id}
@@ -147,7 +139,7 @@ export default function FarmsView({
                             className="bg-[#FAF8F5] p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl border border-emerald-950/5 text-center flex sm:flex-col justify-between sm:justify-center items-center px-4 sm:px-2"
                           >
                             <span className="block text-[10px] uppercase font-bold text-stone-500 tracking-wider">
-                              {key}
+                              {formatMetricLabel(key)}
                             </span>
                             <span className="block text-xs sm:text-sm font-bold text-[#072418] sm:mt-1">
                               {value}
@@ -241,7 +233,6 @@ export default function FarmsView({
                     </div>
                   </div>
                 </div>
-              </article>
               </ScrollReveal>
             );
           })}

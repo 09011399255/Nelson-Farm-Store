@@ -32,7 +32,6 @@ export default function ContactSection({ onSubmitSuccess }) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
           {/* Left Column: Simple, Authentic & Balanced */}
-          <div className="lg:col-span-6 lg:pt-6">
           <ScrollReveal
             duration={750}
             distance={20}
@@ -68,12 +67,15 @@ export default function ContactSection({ onSubmitSuccess }) {
                 />
               </a>
             </div>
-          </div>
           </ScrollReveal>
 
           {/* Right Column: Clean, Modern Form Card */}
-          <div className="lg:col-span-6">
-          <ScrollReveal delay={120} duration={750} distance={20} className="lg:col-span-6">
+          <ScrollReveal
+            delay={120}
+            duration={750}
+            distance={20}
+            className="lg:col-span-6"
+          >
             <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-lg border border-emerald-950/10">
               {submitted ? (
                 <div className="text-center py-10 px-4">
@@ -214,7 +216,6 @@ export default function ContactSection({ onSubmitSuccess }) {
                 </form>
               )}
             </div>
-          </div>
           </ScrollReveal>
         </div>
       </div>

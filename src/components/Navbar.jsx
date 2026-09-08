@@ -110,12 +110,6 @@ export default function Navbar({ activeView, setActiveView, onOpenInquiry }) {
               About Us
             </button>
             <button
-              onClick={() => navigateTo("home", "standards")}
-              className="px-3.5 py-2 rounded-lg hover:text-farm-primary hover:bg-gray-50 transition-all font-medium"
-            >
-              Standards
-            </button>
-            <button
               onClick={() => navigateTo("home", "faq")}
               className="px-3.5 py-2 rounded-lg hover:text-farm-primary hover:bg-gray-50 transition-all font-medium"
             >
@@ -215,12 +209,6 @@ export default function Navbar({ activeView, setActiveView, onOpenInquiry }) {
                   className="text-left px-4 py-3 rounded-xl font-semibold text-base text-gray-700 hover:bg-gray-50"
                 >
                   About Us
-                </button>
-                <button
-                  onClick={() => navigateTo("home", "standards")}
-                  className="text-left px-4 py-3 rounded-xl font-semibold text-base text-gray-700 hover:bg-gray-50"
-                >
-                  Quality Standards
                 </button>
                 <button
                   onClick={() => navigateTo("home", "faq")}

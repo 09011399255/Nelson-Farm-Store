@@ -35,8 +35,7 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
 
   return (
     <footer className="bg-[#072418] text-emerald-100/90 font-sans relative">
-      {/* Overlapping Floating CTA Card (Matching Reference Screenshot) */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 -mt-24 sm:-mt-36 mb-12 sm:mb-16 relative z-20">
+      {/* Overlapping Floating CTA Card */}
       <ScrollReveal
         duration={800}
         distance={24}
@@ -63,7 +62,7 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
               expert support, and trusted farm solutions.
             </p>
 
-            {/* Pill CTA Button (Matching Reference Screenshot) */}
+            {/* Pill CTA Button */}
             <button
               onClick={() =>
                 onOpenInquiry
@@ -79,11 +78,9 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
             </button>
           </div>
         </div>
-      </div>
       </ScrollReveal>
 
       {/* Main Footer Links & Information Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16">
       <ScrollReveal
         delay={100}
         duration={750}
@@ -104,7 +101,7 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
               partner in ethical livestock husbandry and wholesome farm produce.
             </p>
 
-            {/* Social Icons (Rounded Green Circles) */}
+            {/* Social Icons */}
             <div className="flex items-center gap-2.5">
               <a
                 href="https://instagram.com"
@@ -177,14 +174,6 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate("home", "standards")}
-                  className="hover:text-[#a3e635] transition-colors"
-                >
-                  Quality Standards
-                </button>
-              </li>
-              <li>
-                <button
                   onClick={() => onNavigate("home", "contact")}
                   className="hover:text-[#a3e635] transition-colors"
                 >
@@ -194,8 +183,8 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
             </ul>
           </div>
 
-          {/* Col 3: Farm Divisions (2 cols) */}
-          <div className="lg:col-span-2">
+          {/* Col 3: Farm Divisions (3 cols) */}
+          <div className="lg:col-span-3">
             <h4 className="text-xs uppercase font-bold text-white tracking-widest mb-4">
               Farm Divisions
             </h4>
@@ -213,47 +202,8 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
             </ul>
           </div>
 
-          {/* Col 4: Direct Support / Hub (2 cols) */}
-          <div className="lg:col-span-2">
-            <h4 className="text-xs uppercase font-bold text-white tracking-widest mb-4">
-              Direct Desk
-            </h4>
-            <div className="space-y-3 text-xs sm:text-sm text-emerald-200/80">
-              <p>
-                <span className="block text-[10px] text-emerald-400 font-bold uppercase tracking-wider">
-                  Call & WhatsApp
-                </span>
-                <a
-                  href="tel:+2348012345678"
-                  className="hover:text-white font-semibold block mt-0.5"
-                >
-                  +234 801 234 5678
-                </a>
-              </p>
-              <p>
-                <span className="block text-[10px] text-emerald-400 font-bold uppercase tracking-wider">
-                  Email
-                </span>
-                <a
-                  href="mailto:info@nelsonfarmsstore.com"
-                  className="hover:text-white block mt-0.5"
-                >
-                  info@nelsonfarmsstore.com
-                </a>
-              </p>
-              <p>
-                <span className="block text-[10px] text-emerald-400 font-bold uppercase tracking-wider">
-                  Hub Location
-                </span>
-                <span className="block mt-0.5">
-                  Lagos & Ogun State, Nigeria
-                </span>
-              </p>
-            </div>
-          </div>
-
-          {/* Col 5: Newsletter Subscription (3 cols) */}
-          <div className="lg:col-span-3">
+          {/* Col 4: Newsletter Subscription (4 cols) */}
+          <div className="lg:col-span-4">
             <h4 className="text-xs uppercase font-bold text-white tracking-widest mb-2">
               Join 15,000+ Customers
             </h4>
@@ -287,7 +237,6 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
             )}
           </div>
         </div>
-      </div>
       </ScrollReveal>
 
       {/* Bottom Sub-footer */}
