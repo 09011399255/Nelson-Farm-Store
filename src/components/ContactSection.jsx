@@ -44,9 +44,7 @@ export default function ContactSection({ onSubmitSuccess }) {
 
             <p className="text-stone-600 text-sm sm:text-lg leading-relaxed mb-6 sm:mb-7 font-normal max-w-lg">
               Reach out to our farm desk to book live stock, fresh cuts, or
-              commercial bulk supplies. We deliver daily across Ibadan, Lagos,
-              and Ogun State. commercial bulk supplies. We deliver daily across
-              all regions.
+              commercial bulk supplies. We deliver daily across all regions.
             </p>
 
             {/* Authentic WhatsApp Action Button */}
