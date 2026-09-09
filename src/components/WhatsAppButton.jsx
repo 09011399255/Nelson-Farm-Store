@@ -4,7 +4,7 @@ import { MessageCircle, X } from "lucide-react";
 export default function WhatsAppButton() {
   const [showTooltip, setShowTooltip] = useState(true);
 
-  const phone = "2348012345678";
+  const phone = "2349069711500";
   const defaultMessage = encodeURIComponent(
     "Hello Nelson Farms Store, I would like to make an inquiry about your livestock and farm products.",
   );

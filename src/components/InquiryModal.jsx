@@ -111,7 +111,7 @@ export default function InquiryModal({
                   <input
                     type="tel"
                     required
-                    placeholder="+234 800..."
+                    placeholder="+234 906 971 1500"
                     value={formData.phone}
                     onChange={(e) =>
                       setFormData({ ...formData, phone: e.target.value })
@@ -153,7 +153,7 @@ export default function InquiryModal({
 
               <div className="pt-2 flex items-center justify-between gap-3">
                 <a
-                  href="tel:+2348012345678"
+                  href="tel:+2349069711500"
                   className="text-xs font-bold text-stone-600 hover:text-[#1ca350] flex items-center gap-1.5 transition-colors"
                 >
                   <PhoneCall size={14} className="text-emerald-700" />

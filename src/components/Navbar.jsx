@@ -33,16 +33,17 @@ export default function Navbar({ activeView, setActiveView, onOpenInquiry }) {
         <div className="flex items-center gap-2 truncate">
           <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
           <span className="font-medium truncate sm:overflow-visible">
-            Farm fresh deliveries available daily across Lagos & Ogun State
+            Farm fresh deliveries available daily across Ibadan, Lagos & Ogun
+            State
           </span>
         </div>
         <div className="hidden sm:flex items-center gap-6 flex-shrink-0">
           <a
-            href="tel:+2348012345678"
+            href="tel:+2349069711500"
             className="hover:text-emerald-300 transition-colors flex items-center gap-1.5 font-medium"
           >
             <PhoneCall size={12} className="text-emerald-400" />
-            +234 801 234 5678
+            +234 906 971 1500
           </a>
           <span className="text-emerald-900">•</span>
           <span className="text-emerald-300 font-semibold">
@@ -236,9 +237,19 @@ export default function Navbar({ activeView, setActiveView, onOpenInquiry }) {
                 <span>Make an Order / Inquiry</span>
                 <ArrowRight size={16} />
               </button>
-              <div className="text-center text-xs text-gray-500">
-                Call us:{" "}
-                <strong className="text-gray-800">+234 801 234 5678</strong>
+              <div className="text-center text-xs text-gray-500 space-y-1">
+                <div>
+                  Call us:{" "}
+                  <a
+                    href="tel:+2349069711500"
+                    className="text-gray-800 font-bold hover:text-emerald-600"
+                  >
+                    +234 906 971 1500
+                  </a>
+                </div>
+                <div className="text-[11px] text-gray-400">
+                  KM 7 Akufo Road, Ibadan
+                </div>
               </div>
             </div>
           </div>

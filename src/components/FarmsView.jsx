@@ -296,7 +296,7 @@ export default function FarmsView({
                       </button>
 
                       <a
-                        href="tel:+2348012345678"
+                        href="tel:+2349069711500"
                         className="inline-flex items-center justify-center gap-2 text-xs font-bold text-stone-600 hover:text-[#1ca350] transition-colors py-2.5 sm:py-2 px-3 rounded-full border border-stone-200 sm:border-0 w-full sm:w-auto"
                       >
                         <PhoneCall size={14} className="text-emerald-700" />

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin, Phone } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 export default function ContactSection({ onSubmitSuccess }) {
@@ -44,14 +44,14 @@ export default function ContactSection({ onSubmitSuccess }) {
 
             <p className="text-stone-600 text-sm sm:text-lg leading-relaxed mb-6 sm:mb-7 font-normal max-w-lg">
               Reach out to our farm desk to book live stock, fresh cuts, or
-              commercial bulk supplies. We deliver daily across Lagos and Ogun
-              State.
+              commercial bulk supplies. We deliver daily across Ibadan, Lagos,
+              and Ogun State.
             </p>
 
             {/* Authentic WhatsApp Action Button */}
             <div>
               <a
-                href="https://wa.me/2348012345678?text=Hello%20Nelson%20Farms%2C%20I%20would%20like%20to%20place%20an%20order."
+                href="https://wa.me/2349069711500?text=Hello%20Nelson%20Farms%2C%20I%20would%20like%20to%20place%20an%20order."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm sm:text-base py-3.5 px-6 sm:px-7 rounded-full shadow-md hover:shadow-lg transition-all duration-200 group w-full sm:w-auto"
@@ -66,6 +66,40 @@ export default function ContactSection({ onSubmitSuccess }) {
                   className="group-hover:translate-x-1 transition-transform"
                 />
               </a>
+            </div>
+
+            {/* Quick Contact & Farm Location Cards */}
+            <div className="mt-8 pt-6 border-t border-emerald-950/10 space-y-4">
+              <div className="flex items-start gap-3.5">
+                <div className="w-9 h-9 rounded-xl bg-emerald-100/80 text-[#1ca350] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <MapPin size={18} />
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-stone-500 uppercase tracking-wider block">
+                    Company & Farm Address
+                  </span>
+                  <p className="text-sm font-semibold text-[#072418] leading-snug">
+                    KM 7 Akufo Road, Ibadan, Oyo State, Nigeria
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3.5">
+                <div className="w-9 h-9 rounded-xl bg-emerald-100/80 text-[#1ca350] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Phone size={18} />
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-stone-500 uppercase tracking-wider block">
+                    Direct Phone / WhatsApp
+                  </span>
+                  <a
+                    href="tel:+2349069711500"
+                    className="text-sm font-semibold text-[#072418] hover:text-[#1ca350] transition-colors"
+                  >
+                    +234 906 971 1500
+                  </a>
+                </div>
+              </div>
             </div>
           </ScrollReveal>
 
@@ -141,7 +175,7 @@ export default function ContactSection({ onSubmitSuccess }) {
                     <input
                       type="tel"
                       required
-                      placeholder="+234 801 234 5678"
+                      placeholder="+234 906 971 1500"
                       value={formData.phone}
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })

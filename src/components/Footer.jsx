@@ -96,10 +96,30 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
               </span>
             </div>
 
-            <p className="text-xs sm:text-sm text-emerald-200/70 leading-relaxed mb-6 font-normal">
+            <p className="text-xs sm:text-sm text-emerald-200/70 leading-relaxed mb-4 font-normal">
               Growing smarter, greener, and together — your trusted agricultural
               partner in ethical livestock husbandry and wholesome farm produce.
             </p>
+
+            {/* Address & Contact Info */}
+            <div className="space-y-2.5 mb-6 text-xs text-emerald-200/85">
+              <div className="flex items-start gap-2.5">
+                <MapPin
+                  size={15}
+                  className="text-[#a3e635] flex-shrink-0 mt-0.5"
+                />
+                <span>KM 7 Akufo Road, Ibadan, Oyo State, Nigeria</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Phone size={15} className="text-[#a3e635] flex-shrink-0" />
+                <a
+                  href="tel:+2349069711500"
+                  className="hover:text-[#a3e635] transition-colors font-medium"
+                >
+                  +234 906 971 1500
+                </a>
+              </div>
+            </div>
 
             {/* Social Icons */}
             <div className="flex items-center gap-2.5">
@@ -131,7 +151,7 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
                 <Youtube size={15} />
               </a>
               <a
-                href="https://wa.me/2348012345678"
+                href="https://wa.me/2349069711500"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="WhatsApp"
