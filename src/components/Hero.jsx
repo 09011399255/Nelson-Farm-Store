@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import { ArrowRight, ArrowUpRight, Play, CheckCircle2 } from "lucide-react";
+import React from "react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 export default function Hero({ onExploreFarms, onOpenInquiry }) {
-  const [isPlayingVideo, setIsPlayingVideo] = useState(false);
 
   return (
     <div className="relative">
@@ -123,32 +122,24 @@ export default function Hero({ onExploreFarms, onOpenInquiry }) {
               </div>
             </div>
 
-            {/* Right: Healthy Life With Fresh Products & Video Thumbnail */}
+            {/* Right: Farm Facilities Showcase Thumbnail */}
             <div className="flex items-center justify-between sm:justify-center md:justify-end gap-3 sm:gap-4 w-full md:w-auto pt-3 md:pt-0 border-t border-[#072418]/15 md:border-t-0">
               <div className="text-left sm:text-right">
                 <div className="font-bold text-sm sm:text-base lg:text-lg text-[#072418] leading-tight">
-                  Watch Farm Tour
+                  Modern Farm Facilities
                 </div>
                 <div className="text-[11px] sm:text-xs font-semibold text-[#0a3822]">
-                  Fresh Products & Facilities
+                  Bio-Secure Standards
                 </div>
               </div>
 
-              {/* Farm Video / Tour Preview Thumbnail Card */}
-              <div
-                onClick={() => onOpenInquiry("Farm Tour Video & Audit")}
-                className="relative w-28 h-16 sm:w-36 sm:h-20 rounded-xl overflow-hidden shadow-md cursor-pointer group border-2 border-white/80 flex-shrink-0"
-              >
+              {/* Farm Facility Thumbnail Card */}
+              <div className="relative w-28 h-16 sm:w-36 sm:h-20 rounded-xl overflow-hidden shadow-md border-2 border-white/80 flex-shrink-0">
                 <img
                   src="/fishery-commercial.jpg"
-                  alt="Farm tour"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  alt="Modern Farm Facilities"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#1ca350] text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                    <Play size={12} fill="white" className="ml-0.5" />
-                  </div>
-                </div>
               </div>
             </div>
           </div>
