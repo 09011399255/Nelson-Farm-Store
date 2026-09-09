@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Phone,
-  MapPin,
-  ArrowUp,
-  ArrowRight,
-} from "lucide-react";
+import { Phone, MapPin, ArrowUp, ArrowRight } from "lucide-react";
 import { LIVESTOCK_SECTORS } from "../data/farmsData";
 import ScrollReveal from "./ScrollReveal";
 
