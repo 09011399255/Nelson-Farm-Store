@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Shield,
   Truck,
@@ -13,9 +13,16 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function WhyChooseUs() {
   const [activeIndex, setActiveIndex] = useState(1);
+  const [dragOffset, setDragOffset] = useState(0);
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 1200,
   );
+
+  const touchStartX = useRef(null);
+  const touchStartY = useRef(null);
+  const touchEndX = useRef(null);
+  const touchEndY = useRef(null);
+  const isDragging = useRef(false);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -31,6 +38,107 @@ export default function WhyChooseUs() {
     setActiveIndex((prev) => (prev === TESTIMONIALS.length - 1 ? 0 : prev + 1));
   };
 
+  // Mobile Touch Gestures
+  const handleTouchStart = (e) => {
+    if (!e.touches || e.touches.length === 0) return;
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+    touchEndX.current = e.touches[0].clientX;
+    touchEndY.current = e.touches[0].clientY;
+    isDragging.current = true;
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging.current || touchStartX.current === null) return;
+    touchEndX.current = e.touches[0].clientX;
+    touchEndY.current = e.touches[0].clientY;
+
+    const diffX = touchEndX.current - touchStartX.current;
+    const diffY = touchEndY.current - touchStartY.current;
+
+    // Only apply horizontal drag if horizontal motion is dominant
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      const maxDrag = 70;
+      const dampened =
+        Math.sign(diffX) * Math.min(Math.abs(diffX) * 0.7, maxDrag);
+      setDragOffset(dampened);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (!isDragging.current || touchStartX.current === null) {
+      setDragOffset(0);
+      isDragging.current = false;
+      return;
+    }
+
+    const diffX = touchEndX.current - touchStartX.current;
+    const diffY = touchEndY.current - touchStartY.current;
+    const minSwipeDistance = 35; // Responsive threshold for mobile swipe
+
+    if (
+      Math.abs(diffX) > minSwipeDistance &&
+      Math.abs(diffX) > Math.abs(diffY)
+    ) {
+      if (diffX < 0) {
+        handleNext();
+      } else {
+        handlePrev();
+      }
+    }
+
+    setDragOffset(0);
+    touchStartX.current = null;
+    touchStartY.current = null;
+    touchEndX.current = null;
+    touchEndY.current = null;
+    isDragging.current = false;
+  };
+
+  const handleTouchCancel = () => {
+    setDragOffset(0);
+    touchStartX.current = null;
+    touchStartY.current = null;
+    touchEndX.current = null;
+    touchEndY.current = null;
+    isDragging.current = false;
+  };
+
+  // Mouse Drag Gestures (for desktop/tablet mouse simulation)
+  const handleMouseDown = (e) => {
+    touchStartX.current = e.clientX;
+    touchStartY.current = e.clientY;
+    touchEndX.current = e.clientX;
+    touchEndY.current = e.clientY;
+    isDragging.current = true;
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging.current || touchStartX.current === null) return;
+    touchEndX.current = e.clientX;
+    touchEndY.current = e.clientY;
+
+    const diffX = touchEndX.current - touchStartX.current;
+    const diffY = touchEndY.current - touchStartY.current;
+
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      const maxDrag = 70;
+      const dampened =
+        Math.sign(diffX) * Math.min(Math.abs(diffX) * 0.7, maxDrag);
+      setDragOffset(dampened);
+    }
+  };
+
+  const handleMouseUp = () => {
+    handleTouchEnd();
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging.current) {
+      handleTouchEnd();
+    }
+  };
+
   // Calculate sliding translation
   const isMobile = windowWidth < 640;
   const isTablet = windowWidth >= 640 && windowWidth < 1024;
@@ -40,16 +148,16 @@ export default function WhyChooseUs() {
 
   if (isMobile) {
     shiftIndex = activeIndex;
-    transformStyle = `translateX(calc(-${shiftIndex} * (100% + 24px)))`;
+    transformStyle = `translateX(calc(-${shiftIndex} * (100% + 16px) + ${dragOffset}px))`;
   } else if (isTablet) {
     shiftIndex = Math.min(activeIndex, TESTIMONIALS.length - 2);
-    transformStyle = `translateX(calc(-${shiftIndex} * (50% + 12px)))`;
+    transformStyle = `translateX(calc(-${shiftIndex} * (50% + 12px) + ${dragOffset}px))`;
   } else {
     shiftIndex = Math.min(
       Math.max(0, activeIndex - 1),
       Math.max(0, TESTIMONIALS.length - 3),
     );
-    transformStyle = `translateX(calc(-${shiftIndex} * (33.3333% + 8px)))`;
+    transformStyle = `translateX(calc(-${shiftIndex} * (33.3333% + 8px) + ${dragOffset}px))`;
   }
 
   const pillars = [
@@ -152,10 +260,24 @@ export default function WhyChooseUs() {
           </ScrollReveal>
 
           {/* Carousel Viewport Container */}
-          <ScrollReveal delay={100} duration={750} distance={20}>
-            <div className="overflow-hidden px-1 py-4 -mx-1 -my-4">
+          <ScrollReveal delay={100} duration={800} distance={36}>
+            <div
+              className="overflow-hidden px-1 py-4 -mx-1 -my-4 touch-pan-y select-none cursor-grab active:cursor-grabbing"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+              onTouchCancel={handleTouchCancel}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseLeave}
+            >
               <div
-                className="flex gap-4 sm:gap-6 transition-transform duration-500 ease-out"
+                className={`flex gap-4 sm:gap-6 ${
+                  dragOffset !== 0
+                    ? "transition-none"
+                    : "transition-transform duration-500 ease-out"
+                }`}
                 style={{ transform: transformStyle }}
               >
                 {TESTIMONIALS.map((t, idx) => {
@@ -163,7 +285,12 @@ export default function WhyChooseUs() {
                   return (
                     <div
                       key={t.id || idx}
-                      onClick={() => setActiveIndex(idx)}
+                      onClick={() => {
+                        // Only change active card if user wasn't swiping
+                        if (Math.abs(dragOffset) < 10) {
+                          setActiveIndex(idx);
+                        }
+                      }}
                       className={`w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 transition-all duration-300 rounded-2xl sm:rounded-[28px] p-5 sm:p-8 flex flex-col justify-between cursor-pointer ${
                         isActive
                           ? "bg-[#072418] text-white shadow-2xl border-2 border-[#a3e635]/40 scale-[1.01]"
@@ -248,6 +375,11 @@ export default function WhyChooseUs() {
                 />
               ))}
             </div>
+
+            {/* Mobile swipe hint */}
+            <p className="flex sm:hidden justify-center items-center gap-1.5 mt-3 text-stone-400 text-[11px] font-medium select-none">
+              <span>← Swipe left or right to view more →</span>
+            </p>
           </ScrollReveal>
         </div>
       </div>
