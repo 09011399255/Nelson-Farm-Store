@@ -35,6 +35,7 @@ export default function Navbar({ activeView, setActiveView, onOpenInquiry }) {
           <span className="font-medium truncate sm:overflow-visible">
             Farm fresh deliveries available daily across Ibadan, Lagos & Ogun
             State
+            Farm fresh deliveries available daily across all regions
           </span>
         </div>
         <div className="hidden sm:flex items-center gap-6 flex-shrink-0">
