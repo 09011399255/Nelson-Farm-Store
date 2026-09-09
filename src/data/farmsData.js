@@ -5,14 +5,14 @@ export const LIVESTOCK_SECTORS = [
     shortName: "Chicken",
     eyebrow: "FRESH LAYERS & VIGOROUS BROILERS",
     tag: "Layers & Broilers",
-    badge: "Daily Fresh Harvest",
+    badge: "Fresh Farm Harvest",
     description:
       "High-producing poultry units dedicated to table eggs with rich golden yolks and robust, tender table broilers. Raised with spacious cross-ventilation and 100% wholesome feed.",
     image: "/poultry-battery-cages.jpg",
     gallery: ["/poultry-battery-cages.jpg"],
     features: [
       "Modern battery cage housing with automated nipple drinkers",
-      "Daily harvested organic jumbo brown eggs",
+      "Organic jumbo brown eggs with golden yolks",
       "Plump, tender table broilers & POL pullets",
       "Natural feed enriched with maize & minerals",
     ],
@@ -62,7 +62,7 @@ export const LIVESTOCK_SECTORS = [
     features: [
       "Concrete sanitary pens with automated bite drinkers",
       "Healthy, active breeding stock and weaners",
-      "Strict bio-security protocols & daily sanitation",
+      "Strict bio-security protocols & routine sanitation",
       "Zero growth hormones — 100% wholesome feed",
     ],
     products: [
@@ -253,7 +253,7 @@ export const QUALITY_PILLARS = [
     category: "Farm-Gate Dispatch",
     title: "Cold-Chain Delivery & Traceability",
     description:
-      "Supplying live stock or freshly dressed vacuum cuts directly from the farm gate across Lagos and Ogun State.",
+      "Supplying live stock or freshly dressed vacuum cuts directly from the farm gate across all regions.",
     image: "/process-delivery.jpg",
     icon: "Truck",
   },
@@ -282,7 +282,7 @@ export const TESTIMONIALS = [
     id: 3,
     rating: 5,
     quote:
-      "Our supermarket chain relies on Nelson Farms for dressed broilers and oven-smoked catfish. Their cold-chain dispatch and supply punctuality are the best we have experienced in Lagos.",
+      "Our supermarket chain relies on Nelson Farms for dressed broilers and oven-smoked catfish. Their cold-chain dispatch and supply punctuality are the best we have experienced in the region.",
     author: "Chukwudi Nwosu",
     role: "Procurement Lead, Prime Grocers",
     avatar: "/testimonials/chukwudi_nwosu.jpg",
@@ -293,7 +293,7 @@ export const TESTIMONIALS = [
     quote:
       "We source our breeding weaners and market hogs exclusively from Nelson Farms. Their biosecurity protocols and veterinary vaccination records give us total peace of mind.",
     author: "Dr. Amina Bello",
-    role: "Agro-Enterprise Consultant, Ogun State",
+    role: "Agro-Enterprise Consultant",
     avatar: "/testimonials/dr_amina.jpg",
   },
   {
@@ -318,9 +318,9 @@ export const TESTIMONIALS = [
 
 export const FAQS = [
   {
-    question: "Where do you deliver across Lagos and Nigeria?",
+    question: "Where do you deliver across Nigeria?",
     answer:
-      "We offer daily scheduled deliveries across Lagos Island (Ikoyi, Victoria Island, Lekki, Ajah) and Lagos Mainland (Ikeja, Surulere, Maryland, Magodo, Yaba), as well as bulk refrigerated dispatches to Ogun State.",
+      "We offer scheduled deliveries across all regions, including cold-chain and live-haul dispatches for both household orders and commercial bulk supplies.",
   },
   {
     question: "What farming divisions do you operate?",
@@ -346,9 +346,9 @@ export const FAQS = [
 ];
 
 export const LIVE_TICKER = [
-  "Daily Egg Harvest: 140+ crates collected fresh this morning",
+  "Fresh Egg Harvest: 140+ crates collected fresh this morning",
   "Fresh Catfish Harvest: Live & oven-smoked batches ready",
-  "Free Lagos delivery on orders over ₦60,000",
+  "Free delivery on orders over ₦60,000",
   "Heritage turkeys available for booking",
   "Pure borehole water & bio-secure farm protocols verified",
 ];

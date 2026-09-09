@@ -33,7 +33,7 @@ export default function Navbar({ activeView, setActiveView, onOpenInquiry }) {
         <div className="flex items-center gap-2 truncate">
           <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
           <span className="font-medium truncate sm:overflow-visible">
-            Farm fresh deliveries available daily across all regions
+            Farm-fresh delivery across all regions
           </span>
         </div>
         <div className="hidden sm:flex items-center gap-6 flex-shrink-0">

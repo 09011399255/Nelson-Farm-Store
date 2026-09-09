@@ -143,7 +143,9 @@ export default function PriceCalculator({ onProceedOrder }) {
               </div>
               <div className="flex items-center gap-2 text-emerald-800">
                 <Truck size={14} className="text-emerald-600" />
-                <span>Free dispatch in Lagos on orders exceeding ₦60,000</span>
+                <span>
+                  Free dispatch on qualifying orders exceeding ₦60,000
+                </span>
               </div>
             </div>
           </div>
@@ -186,7 +188,7 @@ export default function PriceCalculator({ onProceedOrder }) {
                 )}
 
                 <div className="flex justify-between text-xs text-emerald-200/80">
-                  <span>Lagos Delivery:</span>
+                  <span>Estimated Delivery:</span>
                   <span
                     className={
                       isFreeDelivery

@@ -71,7 +71,7 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                 <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-[#072418]/85 backdrop-blur-md text-white text-[11px] sm:text-xs font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-[#a3e635]/40 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#a3e635]"></span>
                   <span className="truncate">
-                    Bio-Secure Farmlands • Lagos & Ogun
+                    Bio-Secure Farmlands • Certified Facilities
                   </span>
                 </div>
               </div>
@@ -125,7 +125,7 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                       <div className="w-5 h-5 rounded-full bg-[#a3e635] text-[#072418] flex items-center justify-center flex-shrink-0">
                         <Check size={12} className="stroke-[3]" />
                       </div>
-                      <span>Daily Harvest of Fresh Eggs & Fish</span>
+                      <span>Fresh Harvest of Eggs & Fish</span>
                     </div>
 
                     <div className="flex items-center gap-3 text-xs sm:text-sm font-semibold text-emerald-100">
