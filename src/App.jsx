@@ -8,15 +8,12 @@ import ProcessSection from "./components/ProcessSection";
 import WhyChooseUs from "./components/WhyChooseUs";
 import FaqSection from "./components/FaqSection";
 import ContactSection from "./components/ContactSection";
-import InquiryModal from "./components/InquiryModal";
 import Footer from "./components/Footer";
 import { CheckCircle2 } from "lucide-react";
 
 export default function App() {
   const [activeView, setActiveView] = useState("home"); // 'home' or 'farms'
   const [selectedFarmId, setSelectedFarmId] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalSubject, setModalSubject] = useState("General Order");
   const [toastMessage, setToastMessage] = useState(null);
 
   const showToast = (msg) => {
@@ -26,9 +23,10 @@ export default function App() {
     }, 4000);
   };
 
-  const handleOpenInquiry = (subject = "General Inquiry") => {
-    setModalSubject(subject);
-    setIsModalOpen(true);
+  const handleOpenWhatsApp = (subject = "General Order") => {
+    const text = `Hello Nelson Farms, I am reaching out to place an order regarding: ${subject}.`;
+    const whatsappUrl = `https://wa.me/2349069711500?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   const handleSelectFarm = (farmId) => {
@@ -71,7 +69,7 @@ export default function App() {
       <Navbar
         activeView={activeView}
         setActiveView={setActiveView}
-        onOpenInquiry={handleOpenInquiry}
+        onOpenInquiry={handleOpenWhatsApp}
       />
 
       {/* Main Content Area */}
@@ -80,33 +78,29 @@ export default function App() {
           <>
             <Hero
               onExploreFarms={handleExploreFarms}
-              onOpenInquiry={handleOpenInquiry}
+              onOpenInquiry={handleOpenWhatsApp}
             />
             <AboutSection
               onLearnMore={handleExploreFarms}
-              onOpenInquiry={handleOpenInquiry}
+              onOpenInquiry={handleOpenWhatsApp}
             />
             <LivestockSection
               onSelectFarm={handleSelectFarm}
-              onOpenInquiry={handleOpenInquiry}
+              onOpenInquiry={handleOpenWhatsApp}
             />
             <ProcessSection />
             <WhyChooseUs />
             <FaqSection
-              onAskQuestion={() => handleOpenInquiry("Custom Farming Question")}
-            />
-            <ContactSection
-              onSubmitSuccess={(data) =>
-                showToast(
-                  `Thank you ${data.name}, opening WhatsApp to complete your order!`,
-                )
+              onAskQuestion={() =>
+                handleOpenWhatsApp("Custom Farming Question")
               }
             />
+            <ContactSection />
           </>
         ) : (
           <FarmsView
             onBackToHome={() => handleNavigate("home")}
-            onOpenInquiry={handleOpenInquiry}
+            onOpenInquiry={handleOpenWhatsApp}
             selectedFarmId={selectedFarmId}
           />
         )}
@@ -116,17 +110,7 @@ export default function App() {
       <Footer
         onNavigate={handleNavigate}
         onSelectFarm={handleSelectFarm}
-        onOpenInquiry={handleOpenInquiry}
-      />
-
-      {/* Global Order/Inquiry Modal */}
-      <InquiryModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        initialSubject={modalSubject}
-        onSubmitSuccess={(data) =>
-          showToast(`Inquiry sent for ${data.subject}!`)
-        }
+        onOpenInquiry={handleOpenWhatsApp}
       />
     </div>
   );
