@@ -98,7 +98,7 @@ export default function App() {
             <ContactSection
               onSubmitSuccess={(data) =>
                 showToast(
-                  `Thank you ${data.name}, your request has been logged!`,
+                  `Thank you ${data.name}, opening WhatsApp to complete your order!`,
                 )
               }
             />

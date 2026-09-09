@@ -330,13 +330,13 @@ export const FAQS = [
   {
     question: "Can I buy live animals or only dressed meat?",
     answer:
-      "We supply both! You can order live broilers, pigs, turkeys, and catfish, or request hygienically slaughtered, dressed, and vacuum-sealed packaging prepared on order.",
+      "We supply both! You can order live broilers, pigs, turkeys, and catfish, or receive hygienically slaughtered, dressed, and vacuum-sealed packaging prepared on order.",
   },
   {
     question:
       "How can commercial businesses or supermarkets place wholesale orders?",
     answer:
-      "Supermarkets, hotels, and restaurants can request dedicated wholesale pricing contracts with scheduled weekly deliveries and formal invoicing.",
+      "Supermarkets, hotels, and restaurants can set up dedicated wholesale pricing contracts with scheduled weekly deliveries and formal invoicing.",
   },
   {
     question: "Can prospective partners visit the farm?",

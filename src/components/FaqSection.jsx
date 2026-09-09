@@ -91,7 +91,7 @@ export default function FaqSection({ onAskQuestion }) {
               </div>
               <div>
                 <h5 className="font-sans text-sm font-bold text-[#072418]">
-                  Have a custom inquiry or special livestock request?
+                  Have a custom inquiry or special livestock order?
                 </h5>
                 <p className="text-xs text-stone-500 mt-0.5">
                   Our farm representatives are available 6 days a week to
@@ -104,7 +104,7 @@ export default function FaqSection({ onAskQuestion }) {
               onClick={onAskQuestion}
               className="group inline-flex items-center justify-center gap-2.5 bg-[#1ca350] hover:bg-[#168a42] text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-full shadow-sm hover:shadow-md transition-all flex-shrink-0 w-full sm:w-auto"
             >
-              <span>Ask Farm Desk</span>
+              <span>Chat on WhatsApp</span>
               <div className="w-5 h-5 rounded-full bg-[#0d5328] flex items-center justify-center text-white group-hover:translate-x-0.5 transition-transform">
                 <ArrowRight size={11} />
               </div>
