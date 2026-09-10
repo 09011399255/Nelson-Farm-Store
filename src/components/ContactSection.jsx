@@ -1,10 +1,12 @@
 import React from "react";
-import { MapPin, Phone, ExternalLink } from "lucide-react";
+import { MapPin, Phone, Mail, Building2, ExternalLink } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 export default function ContactSection() {
-  const mapsUrl =
+  const farmMapsUrl =
     "https://www.google.com/maps/search/?api=1&query=KM+7+Akufo+Road+Ibadan+Oyo+State+Nigeria";
+  const officeMapsUrl =
+    "https://www.google.com/maps/search/?api=1&query=Block+7+Iyana+Lepa+Awotan+Apete+Ibadan";
 
   return (
     <section
@@ -15,34 +17,71 @@ export default function ContactSection() {
         <ScrollReveal duration={750} distance={20}>
           {/* Main Visual Location Card */}
           <div className="bg-white rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 lg:p-10 shadow-lg border border-stone-200/80">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
               {/* Left Column: Information & Actions */}
-              <div className="lg:col-span-5 flex flex-col justify-center space-y-5">
-                {/* Brand Tag */}
-                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#1ca350]">
-                  <span className="w-2 h-2 rounded-full bg-[#1ca350]"></span>
-                  <span>Nelson Farms</span>
-                </div>
-
-                {/* Main Heading */}
+              <div className="lg:col-span-6 flex flex-col justify-between space-y-4">
                 <div>
-                  <h2 className="font-sans text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#072418] tracking-tight leading-tight">
-                    Visit our farm in Ibadan
-                  </h2>
-                  <p className="text-stone-500 text-xs sm:text-sm mt-1.5 leading-relaxed">
-                    Open for inspections, live stock bookings, and wholesale pickups.
-                  </p>
+                  {/* Brand Tag */}
+                  <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#1ca350] mb-3">
+                    <span className="w-2 h-2 rounded-full bg-[#1ca350]"></span>
+                    <span>Nelson Farms</span>
+                  </div>
+
+                  {/* Main Heading */}
+                  <div>
+                    <h2 className="font-sans text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#072418] tracking-tight leading-tight">
+                      Visit & connect with us
+                    </h2>
+                    <p className="text-stone-500 text-xs sm:text-sm mt-1.5 leading-relaxed">
+                      Reach our office for administrative enquiries or visit our
+                      farm for inspections, bookings, and wholesale pickups.
+                    </p>
+                  </div>
                 </div>
 
-                {/* Card 1: Farm Address */}
-                <div className="flex items-center justify-between p-4 sm:p-4.5 rounded-2xl bg-[#FAF8F5] border border-stone-200/80">
+                {/* Card 1: Office Address */}
+                <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/80">
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-11 h-11 rounded-xl bg-emerald-50 text-[#1ca350] flex items-center justify-center flex-shrink-0 border border-emerald-100">
+                      <Building2 size={20} />
+                    </div>
+                    <div>
+                      <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider block">
+                        Office Address
+                      </span>
+                      <p className="text-sm sm:text-base font-bold text-[#072418]">
+                        Block 7 Iyana Lepa, Awotan Apete
+                      </p>
+                      <p className="text-xs text-stone-500">
+                        Ibadan, Oyo State, Nigeria
+                      </p>
+                    </div>
+                  </div>
+
+                  <a
+                    href={officeMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Open Office on Google Maps"
+                    aria-label="Open Office on Google Maps"
+                    className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white hover:bg-emerald-50 text-stone-500 hover:text-[#1ca350] border border-stone-200/80 flex items-center justify-center transition-all shadow-sm flex-shrink-0 group"
+                  >
+                    <ExternalLink
+                      size={17}
+                      className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                    />
+                  </a>
+                </div>
+
+                {/* Card 2: Farm Address */}
+                <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/80">
                   <div className="flex items-center gap-3.5">
                     <div className="w-11 h-11 rounded-xl bg-emerald-50 text-[#1ca350] flex items-center justify-center flex-shrink-0 border border-emerald-100">
                       <MapPin size={20} />
                     </div>
                     <div>
                       <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider block">
-                        Farm Address
+                        Farm Facility Address
                       </span>
                       <p className="text-sm sm:text-base font-bold text-[#072418]">
                         KM 7 Akufo Road
@@ -54,10 +93,11 @@ export default function ContactSection() {
                   </div>
 
                   <a
-                    href={mapsUrl}
+                    href={farmMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="Open in Google Maps"
+                    title="Open Farm on Google Maps"
+                    aria-label="Open Farm on Google Maps"
                     className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white hover:bg-emerald-50 text-stone-500 hover:text-[#1ca350] border border-stone-200/80 flex items-center justify-center transition-all shadow-sm flex-shrink-0 group"
                   >
                     <ExternalLink
@@ -67,8 +107,8 @@ export default function ContactSection() {
                   </a>
                 </div>
 
-                {/* Card 2: Contact Channels */}
-                <div className="flex items-center justify-between p-4 sm:p-4.5 rounded-2xl bg-[#FAF8F5] border border-stone-200/80">
+                {/* Card 3: Contact Channels */}
+                <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/80">
                   <div className="flex items-center gap-3.5">
                     <div className="w-11 h-11 rounded-xl bg-[#072418]/5 text-[#072418] flex items-center justify-center flex-shrink-0 border border-stone-200/60">
                       <Phone size={19} />
@@ -97,10 +137,7 @@ export default function ContactSection() {
                       aria-label="Chat on WhatsApp"
                       className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white flex items-center justify-center transition-all hover:scale-105 shadow-sm"
                     >
-                      <svg
-                        className="w-5 h-5 fill-current"
-                        viewBox="0 0 24 24"
-                      >
+                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
                       </svg>
                     </a>
@@ -116,55 +153,106 @@ export default function ContactSection() {
                     </a>
                   </div>
                 </div>
+
+                {/* Card 4: Official Email */}
+                <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/80">
+                  <div className="flex items-center gap-3.5 min-w-0">
+                    <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center flex-shrink-0 border border-amber-200/60">
+                      <Mail size={19} />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider block">
+                        Official Email
+                      </span>
+                      <a
+                        href="mailto:nelsonfarmingstores@gmail.com"
+                        className="text-xs sm:text-sm md:text-base font-bold text-[#072418] hover:text-[#1ca350] transition-colors truncate block font-mono"
+                      >
+                        nelsonfarmingstores@gmail.com
+                      </a>
+                    </div>
+                  </div>
+
+                  <a
+                    href="mailto:nelsonfarmingstores@gmail.com"
+                    title="Send Email"
+                    aria-label="Send Email"
+                    className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white hover:bg-emerald-50 text-stone-500 hover:text-[#1ca350] border border-stone-200/80 flex items-center justify-center transition-all shadow-sm flex-shrink-0 group"
+                  >
+                    <Mail
+                      size={18}
+                      className="group-hover:scale-110 transition-transform"
+                    />
+                  </a>
+                </div>
               </div>
 
               {/* Right Column: Visual Location Landscape & Map Route */}
-              <div className="lg:col-span-7">
-                <a
-                  href={mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative block h-[280px] sm:h-[360px] lg:h-[400px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-md group border border-stone-200/80 cursor-pointer"
-                >
+              <div className="lg:col-span-6 flex flex-col">
+                <div className="relative h-full min-h-[340px] sm:min-h-[420px] lg:min-h-[480px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-md group border border-stone-200/80 flex flex-col justify-between p-4 sm:p-6">
                   {/* Scenic Road & Farm Aerial Image */}
                   <img
                     src="/about-farm.jpg"
                     alt="Nelson Farms Road and Facilities"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
 
                   {/* Gentle vignette overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-black/20 group-hover:opacity-90 transition-opacity"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/35"></div>
 
-                  {/* Top-Left Frosted Tag: Location Destination */}
-                  <div className="absolute top-4 sm:top-6 left-4 sm:left-6 backdrop-blur-md bg-black/45 border border-white/20 text-white px-3 sm:px-4 py-2 rounded-2xl flex items-center gap-2.5 shadow-lg">
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-[#1ca350] text-white flex items-center justify-center flex-shrink-0 shadow-sm">
-                      <MapPin size={15} />
-                    </div>
-                    <div>
-                      <div className="text-[10px] sm:text-[11px] font-semibold text-emerald-200 leading-tight">
-                        Nelson Farms Site
+                  {/* Top Tags: Locations */}
+                  <div className="relative z-10 flex flex-col sm:flex-row gap-2.5 items-start">
+                    {/* Farm Location Tag */}
+                    <div className="backdrop-blur-md bg-black/50 border border-white/20 text-white px-3.5 py-2 rounded-2xl flex items-center gap-2.5 shadow-lg">
+                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-[#1ca350] text-white flex items-center justify-center flex-shrink-0 shadow-sm">
+                        <MapPin size={15} />
                       </div>
-                      <div className="text-xs sm:text-sm font-bold text-white leading-tight">
-                        KM 7 Akufo Road
+                      <div>
+                        <div className="text-[10px] font-semibold text-emerald-200 leading-tight">
+                          Farm Site
+                        </div>
+                        <div className="text-xs sm:text-sm font-bold text-white leading-tight">
+                          KM 7 Akufo Road
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Office Location Tag */}
+                    <div className="backdrop-blur-md bg-black/50 border border-white/20 text-white px-3.5 py-2 rounded-2xl flex items-center gap-2.5 shadow-lg">
+                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-[#a3e635] text-[#072418] flex items-center justify-center flex-shrink-0 shadow-sm font-bold">
+                        <Building2 size={15} />
+                      </div>
+                      <div>
+                        <div className="text-[10px] font-semibold text-emerald-200 leading-tight">
+                          Office Location
+                        </div>
+                        <div className="text-xs sm:text-sm font-bold text-white leading-tight">
+                          Awotan Apete
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Middle-Right Frosted Tag: Road Corridor Marker */}
-                  <div className="absolute bottom-16 right-4 sm:right-6 backdrop-blur-md bg-black/45 border border-white/20 text-white px-3 sm:px-3.5 py-1.5 rounded-full hidden sm:flex items-center gap-2 shadow-lg">
-                    <span className="w-2 h-2 rounded-full bg-[#a3e635] animate-pulse"></span>
-                    <span className="text-xs font-medium text-emerald-100">
-                      Akufo Agricultural Corridor
-                    </span>
-                  </div>
+                  {/* Bottom Bar: Map links */}
+                  <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 pt-4">
+                    <div className="backdrop-blur-md bg-black/45 border border-white/20 text-white px-3 sm:px-3.5 py-1.5 rounded-full hidden sm:flex items-center gap-2 shadow-lg">
+                      <span className="w-2 h-2 rounded-full bg-[#a3e635] animate-pulse"></span>
+                      <span className="text-xs font-medium text-emerald-100">
+                        Akufo Agricultural Corridor, Ibadan
+                      </span>
+                    </div>
 
-                  {/* Bottom-Left Frosted Pill: Google Maps Link */}
-                  <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 backdrop-blur-md bg-white/90 group-hover:bg-white text-[#072418] px-4 py-2 rounded-full flex items-center gap-2 text-xs font-bold shadow-lg transition-all">
-                    <span>Open in Google Maps</span>
-                    <ExternalLink size={13} className="text-[#1ca350]" />
+                    <a
+                      href={farmMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="backdrop-blur-md bg-white/95 hover:bg-white text-[#072418] px-4 py-2 rounded-full flex items-center gap-2 text-xs font-bold shadow-lg transition-all hover:scale-105"
+                    >
+                      <span>Open Farm on Google Maps</span>
+                      <ExternalLink size={13} className="text-[#1ca350]" />
+                    </a>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
           </div>

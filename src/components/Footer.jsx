@@ -1,5 +1,12 @@
 import React from "react";
-import { Phone, MapPin, ArrowUp, ArrowRight } from "lucide-react";
+import {
+  Phone,
+  MapPin,
+  Mail,
+  Building2,
+  ArrowUp,
+  ArrowRight,
+} from "lucide-react";
 import { LIVESTOCK_SECTORS } from "../data/farmsData";
 import ScrollReveal from "./ScrollReveal";
 
@@ -61,8 +68,8 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 items-start">
-          {/* Col 1: Brand Bio & Socials (3 cols) */}
-          <div className="lg:col-span-3">
+          {/* Col 1: Brand Bio & Socials (4 cols) */}
+          <div className="lg:col-span-4">
             <div className="flex items-center gap-2.5 mb-3">
               <span className="text-2xl font-bold tracking-tight text-white font-sans">
                 Nelson <span className="text-[#a3e635]">Farms</span>
@@ -75,14 +82,33 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
             </p>
 
             {/* Address & Contact Info */}
-            <div className="space-y-2.5 mb-6 text-xs text-emerald-200/85">
+            <div className="space-y-3 mb-6 text-xs text-emerald-200/85">
+              <div className="flex items-start gap-2.5">
+                <Building2
+                  size={15}
+                  className="text-[#a3e635] flex-shrink-0 mt-0.5"
+                />
+                <div>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-emerald-300/60 block">
+                    Office Address
+                  </span>
+                  <span>Block 7 Iyana Lepa, Awotan Apete, Ibadan</span>
+                </div>
+              </div>
+
               <div className="flex items-start gap-2.5">
                 <MapPin
                   size={15}
                   className="text-[#a3e635] flex-shrink-0 mt-0.5"
                 />
-                <span>KM 7 Akufo Road, Ibadan, Oyo State, Nigeria</span>
+                <div>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-emerald-300/60 block">
+                    Farm Address
+                  </span>
+                  <span>KM 7 Akufo Road, Ibadan, Oyo State, Nigeria</span>
+                </div>
               </div>
+
               <div className="flex items-center gap-2.5">
                 <Phone size={15} className="text-[#a3e635] flex-shrink-0" />
                 <a
@@ -90,6 +116,16 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
                   className="hover:text-[#a3e635] transition-colors font-medium"
                 >
                   +234 906 971 1500
+                </a>
+              </div>
+
+              <div className="flex items-center gap-2.5">
+                <Mail size={15} className="text-[#a3e635] flex-shrink-0" />
+                <a
+                  href="mailto:nelsonfarmingstores@gmail.com"
+                  className="hover:text-[#a3e635] transition-colors font-medium break-all"
+                >
+                  nelsonfarmingstores@gmail.com
                 </a>
               </div>
             </div>
@@ -171,14 +207,14 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
             </ul>
           </div>
 
-          {/* Col 4: Farm Dispatch & Schedules (4 cols) */}
-          <div className="lg:col-span-4">
+          {/* Col 4: Farm Dispatch & Schedules (3 cols) */}
+          <div className="lg:col-span-3">
             <h4 className="text-xs uppercase font-bold text-white tracking-widest mb-2">
               Farm Dispatch & Schedules
             </h4>
             <p className="text-xs text-emerald-200/70 leading-relaxed font-normal">
-              Direct farm gate pickups and scheduled deliveries dispatched across
-              all regions from our farm site in Ibadan.
+              Direct farm gate pickups and scheduled deliveries dispatched
+              across all regions from our farm site in Ibadan.
             </p>
           </div>
         </div>

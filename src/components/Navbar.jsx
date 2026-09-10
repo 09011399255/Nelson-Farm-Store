@@ -245,18 +245,29 @@ export default function Navbar({ activeView, setActiveView, onOpenInquiry }) {
                 </svg>
                 <span>Chat on WhatsApp</span>
               </a>
-              <div className="text-center text-xs text-gray-500 space-y-1">
+              <div className="text-center text-xs text-gray-500 space-y-1.5">
                 <div>
                   Call us:{" "}
                   <a
                     href="tel:+2349069711500"
-                    className="text-gray-800 font-bold hover:text-emerald-600"
+                    className="text-gray-800 font-bold hover:text-emerald-600 font-mono"
                   >
                     +234 906 971 1500
                   </a>
                 </div>
-                <div className="text-[11px] text-gray-400">
-                  KM 7 Akufo Road, Ibadan
+                <div>
+                  <a
+                    href="mailto:nelsonfarmingstores@gmail.com"
+                    className="text-gray-600 hover:text-emerald-600 text-[11px] font-medium"
+                  >
+                    nelsonfarmingstores@gmail.com
+                  </a>
+                </div>
+                <div className="text-[11px] text-gray-400 leading-tight">
+                  <span>Office: Block 7 Iyana Lepa, Awotan Apete, Ibadan</span>
+                  <span className="block mt-0.5">
+                    Farm: KM 7 Akufo Road, Ibadan
+                  </span>
                 </div>
               </div>
             </div>
