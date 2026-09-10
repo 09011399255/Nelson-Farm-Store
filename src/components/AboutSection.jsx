@@ -30,15 +30,13 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
             driven by real agricultural standards.
           </h2>
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-normal">
-            From two years of intensive groundwork at KOM Farms to four years of
-            building Nelson Farms, our operations are led by authentic field
-            experience.
+            Combining an engineering background from The Polytechnic, Ibadan with hands-on groundwork at KOM Farms to build a disciplined, innovative agricultural enterprise.
           </p>
         </ScrollReveal>
 
         {/* Dual Cards Grid: Founder Journey + Hands-On Practice */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-          {/* Card 1: Founder Journey & KOM Farms Background (5 cols) */}
+          {/* Card 1: Founder Journey & Background (5 cols) */}
           <ScrollReveal
             duration={750}
             distance={20}
@@ -75,20 +73,10 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                     The Journey Behind Nelson Farms
                   </h3>
                   <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
-                    Before starting Nelson Farms four years ago, I spent two
-                    years at KOM Farms, learning the realities of livestock
-                    farming firsthand. During that time, I gained practical
-                    experience in animal husbandry, disease prevention, feed
-                    management, and the logistics required to run a successful
-                    commercial farm.
+                    I earned my National Diploma (ND) in Mechatronics Engineering from The Polytechnic, Ibadan in 2017. After graduation, I gained hands-on farming experience at KOM Farms, where I developed practical knowledge in livestock management and farm operations.
                   </p>
                   <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
-                    Those two years shaped the values that guide Nelson Farms
-                    today. They taught me the importance of strict biosecurity,
-                    responsible feed management, and taking personal
-                    accountability for every animal under my care. The
-                    discipline and lessons I gained during that period continue
-                    to influence how we operate and grow as a farm.
+                    I later returned to complete my Higher National Diploma (HND) between 2022 and 2024. Combining my engineering background with years of farming experience inspired me to establish Nelson Farms, built on discipline, innovation, and a commitment to raising healthy livestock.
                   </p>
                 </div>
               </div>
@@ -98,33 +86,33 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                 <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-stone-200/60">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-[#1ca350] mb-1">
                     <Clock size={14} />
-                    <span>2 Years</span>
+                    <span>KOM Farms</span>
                   </div>
                   <div className="text-xs font-bold text-[#072418]">
-                    KOM Farms
+                    Practical Training
                   </div>
                   <div className="text-[11px] text-stone-500 mt-0.5">
-                    Practical Training
+                    Livestock Operations
                   </div>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-stone-200/60">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-[#1ca350] mb-1">
                     <Award size={14} />
-                    <span>4 Years</span>
+                    <span>Mechatronics</span>
                   </div>
                   <div className="text-xs font-bold text-[#072418]">
-                    Nelson Farms
+                    ND & HND Graduate
                   </div>
                   <div className="text-[11px] text-stone-500 mt-0.5">
-                    Established Scale
+                    The Polytechnic, Ibadan
                   </div>
                 </div>
               </div>
             </div>
           </ScrollReveal>
 
-          {/* Card 2: Hands-On Farm Wear & Veterinary Care in Action - 4 Photos in 2x2 Grid (7 cols) */}
+          {/* Card 2: Hands-On Farm Wear & Active Care in Action - 4 Photos in 2x2 Grid (7 cols) */}
           <ScrollReveal
             delay={120}
             duration={750}
@@ -139,13 +127,10 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                     Hands-On Farm Leadership
                   </span>
                   <h3 className="font-sans text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug">
-                    Active, On-Site Veterinary Care & Pen Operations
+                    Active, On-Site Care & Pen Operations
                   </h3>
                   <p className="text-emerald-100/80 text-xs sm:text-sm mt-2 leading-relaxed max-w-xl font-normal">
-                    Building consumer trust means being present where the work
-                    happens. Our founder personally leads clinical health
-                    audits, daily pen inspections, and harvest monitoring across
-                    our livestock facilities.
+                    Building consumer trust means being present where the work happens. I personally lead health audits, daily pen inspections, and harvest monitoring across our livestock facilities.
                   </p>
                 </div>
 
