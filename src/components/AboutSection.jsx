@@ -1,5 +1,11 @@
 import React from "react";
-import { ArrowRight, ShieldCheck, CheckCircle2, Award, Clock } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  CheckCircle2,
+  Award,
+  Clock,
+} from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 export default function AboutSection({ onLearnMore, onOpenInquiry }) {
@@ -10,7 +16,11 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <ScrollReveal duration={750} distance={20} className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+        <ScrollReveal
+          duration={750}
+          distance={20}
+          className="text-center max-w-3xl mx-auto mb-10 sm:mb-14"
+        >
           <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-[#072418] mb-3.5">
             <span className="w-2 h-2 rounded-full bg-[#1ca350]"></span>
             Founder & Heritage
@@ -20,7 +30,9 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
             driven by real agricultural standards.
           </h2>
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-normal">
-            From two years of intensive groundwork at KOM Farms to four years of building Nelson Farms, our operations are led by authentic field experience.
+            From two years of intensive groundwork at KOM Farms to four years of
+            building Nelson Farms, our operations are led by authentic field
+            experience.
           </p>
         </ScrollReveal>
 
@@ -63,10 +75,20 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                     The Journey Behind Nelson Farms
                   </h3>
                   <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
-                    Before starting Nelson Farms four years ago, I spent two years at KOM Farms, learning the realities of livestock farming firsthand. During that time, I gained practical experience in animal husbandry, disease prevention, feed management, and the logistics required to run a successful commercial farm.
+                    Before starting Nelson Farms four years ago, I spent two
+                    years at KOM Farms, learning the realities of livestock
+                    farming firsthand. During that time, I gained practical
+                    experience in animal husbandry, disease prevention, feed
+                    management, and the logistics required to run a successful
+                    commercial farm.
                   </p>
                   <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
-                    Those two years shaped the values that guide Nelson Farms today. They taught me the importance of strict biosecurity, responsible feed management, and taking personal accountability for every animal under my care. The discipline and lessons I gained during that period continue to influence how we operate and grow as a farm.
+                    Those two years shaped the values that guide Nelson Farms
+                    today. They taught me the importance of strict biosecurity,
+                    responsible feed management, and taking personal
+                    accountability for every animal under my care. The
+                    discipline and lessons I gained during that period continue
+                    to influence how we operate and grow as a farm.
                   </p>
                 </div>
               </div>
@@ -78,8 +100,12 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                     <Clock size={14} />
                     <span>2 Years</span>
                   </div>
-                  <div className="text-xs font-bold text-[#072418]">KOM Farms</div>
-                  <div className="text-[11px] text-stone-500 mt-0.5">Practical Training</div>
+                  <div className="text-xs font-bold text-[#072418]">
+                    KOM Farms
+                  </div>
+                  <div className="text-[11px] text-stone-500 mt-0.5">
+                    Practical Training
+                  </div>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-stone-200/60">
@@ -87,8 +113,12 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                     <Award size={14} />
                     <span>4 Years</span>
                   </div>
-                  <div className="text-xs font-bold text-[#072418]">Nelson Farms</div>
-                  <div className="text-[11px] text-stone-500 mt-0.5">Established Scale</div>
+                  <div className="text-xs font-bold text-[#072418]">
+                    Nelson Farms
+                  </div>
+                  <div className="text-[11px] text-stone-500 mt-0.5">
+                    Established Scale
+                  </div>
                 </div>
               </div>
             </div>
@@ -112,7 +142,10 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                     Active, On-Site Veterinary Care & Pen Operations
                   </h3>
                   <p className="text-emerald-100/80 text-xs sm:text-sm mt-2 leading-relaxed max-w-xl font-normal">
-                    Building consumer trust means being present where the work happens. Our founder personally leads clinical health audits, daily pen inspections, and harvest monitoring across our livestock facilities.
+                    Building consumer trust means being present where the work
+                    happens. Our founder personally leads clinical health
+                    audits, daily pen inspections, and harvest monitoring across
+                    our livestock facilities.
                   </p>
                 </div>
 
@@ -120,7 +153,7 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 mb-6">
                   {/* Row 1, Col 1: Lab Photo (founderfarm.png) */}
                   <div className="rounded-2xl overflow-hidden bg-[#0a3822] border border-emerald-800/60 group relative flex flex-col">
-                    <div className="h-44 sm:h-48 overflow-hidden relative">
+                    <div className="h-48 sm:h-52 overflow-hidden relative">
                       <img
                         src="/founderfarm.png"
                         alt="Founder conducting clinical inspections"
@@ -132,20 +165,22 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                       </span>
                     </div>
                     <div className="p-3 bg-[#0b3320]">
-                      <div className="text-xs font-bold text-white">Health & Instrument Checks</div>
+                      <div className="text-xs font-bold text-white">
+                        Health & Instrument Checks
+                      </div>
                       <div className="text-[11px] text-emerald-200/70 mt-0.5">
                         Sanitary tools & live animal wellness audits
                       </div>
                     </div>
                   </div>
 
-                  {/* Row 1, Col 2: Chicken Farm Photo (chickenfounder2.png) */}
+                  {/* Row 1, Col 2: Chicken Farm Photo (chickenfounder2_birds.png) */}
                   <div className="rounded-2xl overflow-hidden bg-[#0a3822] border border-emerald-800/60 group relative flex flex-col">
-                    <div className="h-44 sm:h-48 overflow-hidden relative">
+                    <div className="h-48 sm:h-52 overflow-hidden relative">
                       <img
-                        src="/chickenfounder2.png"
+                        src="/chickenfounder2_birds.png"
                         alt="Founder inspecting fresh egg harvest at the battery pens"
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#072418] via-transparent to-transparent"></div>
                       <span className="absolute bottom-2 left-2 bg-[#072418]/90 text-[#a3e635] text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md border border-emerald-700/50">
@@ -153,7 +188,9 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                       </span>
                     </div>
                     <div className="p-3 bg-[#0b3320]">
-                      <div className="text-xs font-bold text-white">Fresh Table Egg Crates</div>
+                      <div className="text-xs font-bold text-white">
+                        Fresh Table Egg Crates
+                      </div>
                       <div className="text-[11px] text-emerald-200/70 mt-0.5">
                         Direct quality grading beside laying cages
                       </div>
@@ -162,7 +199,7 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
 
                   {/* Row 2, Col 1: Lab Photo (Founder2.png) */}
                   <div className="rounded-2xl overflow-hidden bg-[#0a3822] border border-emerald-800/60 group relative flex flex-col">
-                    <div className="h-44 sm:h-48 overflow-hidden relative">
+                    <div className="h-48 sm:h-52 overflow-hidden relative">
                       <img
                         src="/Founder2.png"
                         alt="Founder at farm desk in lab coat"
@@ -174,20 +211,22 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                       </span>
                     </div>
                     <div className="p-3 bg-[#0b3320]">
-                      <div className="text-xs font-bold text-white">Direct Operational Oversight</div>
+                      <div className="text-xs font-bold text-white">
+                        Direct Operational Oversight
+                      </div>
                       <div className="text-[11px] text-emerald-200/70 mt-0.5">
                         Bio-security tracking & feed formulations
                       </div>
                     </div>
                   </div>
 
-                  {/* Row 2, Col 2: Chicken Farm Photo (chickenfounder.png) */}
+                  {/* Row 2, Col 2: Chicken Farm Photo (chickenfounder_birds.png) */}
                   <div className="rounded-2xl overflow-hidden bg-[#0a3822] border border-emerald-800/60 group relative flex flex-col">
-                    <div className="h-44 sm:h-48 overflow-hidden relative">
+                    <div className="h-48 sm:h-52 overflow-hidden relative">
                       <img
-                        src="/chickenfounder.png"
+                        src="/chickenfounder_birds.png"
                         alt="Founder inspecting poultry battery cages"
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#072418] via-transparent to-transparent"></div>
                       <span className="absolute bottom-2 left-2 bg-[#072418]/90 text-[#a3e635] text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md border border-emerald-700/50">
@@ -195,7 +234,9 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                       </span>
                     </div>
                     <div className="p-3 bg-[#0b3320]">
-                      <div className="text-xs font-bold text-white">Battery Cage Supervision</div>
+                      <div className="text-xs font-bold text-white">
+                        Battery Cage Supervision
+                      </div>
                       <div className="text-[11px] text-emerald-200/70 mt-0.5">
                         Clean pen ventilation & flock health audits
                       </div>
@@ -208,19 +249,31 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
               <div className="pt-4 border-t border-emerald-900/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs text-emerald-100/90 font-medium">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 size={15} className="text-[#a3e635] flex-shrink-0" />
+                    <CheckCircle2
+                      size={15}
+                      className="text-[#a3e635] flex-shrink-0"
+                    />
                     <span>Certified Pen Hygiene</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 size={15} className="text-[#a3e635] flex-shrink-0" />
+                    <CheckCircle2
+                      size={15}
+                      className="text-[#a3e635] flex-shrink-0"
+                    />
                     <span>Zero Antibiotic Abuse</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 size={15} className="text-[#a3e635] flex-shrink-0" />
+                    <CheckCircle2
+                      size={15}
+                      className="text-[#a3e635] flex-shrink-0"
+                    />
                     <span>Transparent Sourcing</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 size={15} className="text-[#a3e635] flex-shrink-0" />
+                    <CheckCircle2
+                      size={15}
+                      className="text-[#a3e635] flex-shrink-0"
+                    />
                     <span>Sanitized Gate Pickup</span>
                   </div>
                 </div>
