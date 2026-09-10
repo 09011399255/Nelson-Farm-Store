@@ -247,20 +247,20 @@ export default function Navbar({ activeView, setActiveView, onOpenInquiry }) {
               </a>
               <div className="text-center text-xs text-gray-500 space-y-1.5">
                 <div>
+                  <a
+                    href="mailto:nelsonfarmingstores@gmail.com"
+                    className="text-gray-600 hover:text-emerald-600 text-[11px] font-medium"
+                  >
+                    nelsonfarmingstores@gmail.com
+                  </a>
+                </div>
+                <div>
                   Call us:{" "}
                   <a
                     href="tel:+2349069711500"
                     className="text-gray-800 font-bold hover:text-emerald-600 font-mono"
                   >
                     +234 906 971 1500
-                  </a>
-                </div>
-                <div>
-                  <a
-                    href="mailto:nelsonfarmingstores@gmail.com"
-                    className="text-gray-600 hover:text-emerald-600 text-[11px] font-medium"
-                  >
-                    nelsonfarmingstores@gmail.com
                   </a>
                 </div>
                 <div className="text-[11px] text-gray-400 leading-tight">

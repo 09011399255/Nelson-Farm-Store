@@ -110,22 +110,22 @@ export default function Footer({ onNavigate, onSelectFarm, onOpenInquiry }) {
               </div>
 
               <div className="flex items-center gap-2.5">
-                <Phone size={15} className="text-[#a3e635] flex-shrink-0" />
-                <a
-                  href="tel:+2349069711500"
-                  className="hover:text-[#a3e635] transition-colors font-medium"
-                >
-                  +234 906 971 1500
-                </a>
-              </div>
-
-              <div className="flex items-center gap-2.5">
                 <Mail size={15} className="text-[#a3e635] flex-shrink-0" />
                 <a
                   href="mailto:nelsonfarmingstores@gmail.com"
                   className="hover:text-[#a3e635] transition-colors font-medium break-all"
                 >
                   nelsonfarmingstores@gmail.com
+                </a>
+              </div>
+
+              <div className="flex items-center gap-2.5">
+                <Phone size={15} className="text-[#a3e635] flex-shrink-0" />
+                <a
+                  href="tel:+2349069711500"
+                  className="hover:text-[#a3e635] transition-colors font-medium"
+                >
+                  +234 906 971 1500
                 </a>
               </div>
             </div>

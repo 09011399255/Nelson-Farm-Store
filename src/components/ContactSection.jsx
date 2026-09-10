@@ -107,7 +107,39 @@ export default function ContactSection() {
                   </a>
                 </div>
 
-                {/* Card 3: Contact Channels */}
+                {/* Card 3: Official Email */}
+                <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/80">
+                  <div className="flex items-center gap-3.5 min-w-0">
+                    <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center flex-shrink-0 border border-amber-200/60">
+                      <Mail size={19} />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider block">
+                        Official Email
+                      </span>
+                      <a
+                        href="mailto:nelsonfarmingstores@gmail.com"
+                        className="text-xs sm:text-sm md:text-base font-bold text-[#072418] hover:text-[#1ca350] transition-colors truncate block font-mono"
+                      >
+                        nelsonfarmingstores@gmail.com
+                      </a>
+                    </div>
+                  </div>
+
+                  <a
+                    href="mailto:nelsonfarmingstores@gmail.com"
+                    title="Send Email"
+                    aria-label="Send Email"
+                    className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white hover:bg-emerald-50 text-stone-500 hover:text-[#1ca350] border border-stone-200/80 flex items-center justify-center transition-all shadow-sm flex-shrink-0 group"
+                  >
+                    <Mail
+                      size={18}
+                      className="group-hover:scale-110 transition-transform"
+                    />
+                  </a>
+                </div>
+
+                {/* Card 4: Contact Channels */}
                 <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/80">
                   <div className="flex items-center gap-3.5">
                     <div className="w-11 h-11 rounded-xl bg-[#072418]/5 text-[#072418] flex items-center justify-center flex-shrink-0 border border-stone-200/60">
@@ -152,38 +184,6 @@ export default function ContactSection() {
                       <Phone size={18} />
                     </a>
                   </div>
-                </div>
-
-                {/* Card 4: Official Email */}
-                <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/80">
-                  <div className="flex items-center gap-3.5 min-w-0">
-                    <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center flex-shrink-0 border border-amber-200/60">
-                      <Mail size={19} />
-                    </div>
-                    <div className="min-w-0">
-                      <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider block">
-                        Official Email
-                      </span>
-                      <a
-                        href="mailto:nelsonfarmingstores@gmail.com"
-                        className="text-xs sm:text-sm md:text-base font-bold text-[#072418] hover:text-[#1ca350] transition-colors truncate block font-mono"
-                      >
-                        nelsonfarmingstores@gmail.com
-                      </a>
-                    </div>
-                  </div>
-
-                  <a
-                    href="mailto:nelsonfarmingstores@gmail.com"
-                    title="Send Email"
-                    aria-label="Send Email"
-                    className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white hover:bg-emerald-50 text-stone-500 hover:text-[#1ca350] border border-stone-200/80 flex items-center justify-center transition-all shadow-sm flex-shrink-0 group"
-                  >
-                    <Mail
-                      size={18}
-                      className="group-hover:scale-110 transition-transform"
-                    />
-                  </a>
                 </div>
               </div>
 
