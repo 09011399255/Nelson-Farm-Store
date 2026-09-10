@@ -30,7 +30,9 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
             driven by real agricultural standards.
           </h2>
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-normal">
-            Combining an engineering background from The Polytechnic, Ibadan with hands-on groundwork at KOM Farms to build a disciplined, innovative agricultural enterprise.
+            Combining an engineering background from The Polytechnic, Ibadan
+            with hands-on groundwork at KOM Farms to build a disciplined,
+            innovative agricultural enterprise.
           </p>
         </ScrollReveal>
 
@@ -73,10 +75,25 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                     The Journey Behind Nelson Farms
                   </h3>
                   <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
-                    I earned my National Diploma (ND) in Mechatronics Engineering from The Polytechnic, Ibadan in 2017. After graduation, I gained hands-on farming experience at KOM Farms, where I developed practical knowledge in livestock management and farm operations.
+                    I earned my National Diploma (ND) in Mechatronics
+                    Engineering from The Polytechnic, Ibadan in 2017. After
+                    graduation, I gained hands-on farming experience at KOM
+                    Farms, where I developed practical knowledge in livestock
+                    management and farm operations.
                   </p>
                   <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
-                    I later returned to complete my Higher National Diploma (HND) between 2022 and 2024. Combining my engineering background with years of farming experience inspired me to establish Nelson Farms, built on discipline, innovation, and a commitment to raising healthy livestock.
+                    I later returned to complete my Higher National Diploma
+                    (HND) between 2022 and 2024. Combining my engineering
+                    background with years of farming experience inspired me to
+                    establish Nelson Farms, built on discipline, innovation, and
+                    a commitment to raising healthy livestock.
+                  </p>
+                  <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
+                    Today, I apply that engineering precision to our pen
+                    routines, strict biosecurity protocols, and feed
+                    formulations. This hands-on approach ensures every bird and
+                    harvest meets the highest standards of health, freshness,
+                    and consumer trust.
                   </p>
                 </div>
               </div>
@@ -130,7 +147,10 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                     Active, On-Site Care & Pen Operations
                   </h3>
                   <p className="text-emerald-100/80 text-xs sm:text-sm mt-2 leading-relaxed max-w-xl font-normal">
-                    Building consumer trust means being present where the work happens. I personally lead health audits, daily pen inspections, and harvest monitoring across our livestock facilities.
+                    Building consumer trust means being present where the work
+                    happens. I personally lead health audits, daily pen
+                    inspections, and harvest monitoring across our livestock
+                    facilities.
                   </p>
                 </div>
 
