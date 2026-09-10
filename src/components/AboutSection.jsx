@@ -94,7 +94,7 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
             </div>
           </ScrollReveal>
 
-          {/* Card 2: Hands-On Farm Wear & Veterinary Care in Action (7 cols) */}
+          {/* Card 2: Hands-On Farm Wear & Veterinary Care in Action - 4 Photos in 2x2 Grid (7 cols) */}
           <ScrollReveal
             delay={120}
             duration={750}
@@ -106,32 +106,32 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                 {/* Header Badge & Title */}
                 <div className="mb-6">
                   <span className="text-[11px] font-bold text-[#a3e635] uppercase tracking-wider block mb-2">
-                    Hands-On Farm Oversight
+                    Hands-On Farm Leadership
                   </span>
                   <h3 className="font-sans text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug">
-                    Active, On-Site Veterinary Care
+                    Active, On-Site Veterinary Care & Pen Operations
                   </h3>
                   <p className="text-emerald-100/80 text-xs sm:text-sm mt-2 leading-relaxed max-w-xl font-normal">
-                    Building consumer trust means being present where the work happens. Our founder personally leads health audits, sanitary pen routines, and animal inspections in certified farm wear.
+                    Building consumer trust means being present where the work happens. Our founder personally leads clinical health audits, daily pen inspections, and harvest monitoring across our livestock facilities.
                   </p>
                 </div>
 
-                {/* Two Lab Coat Working Photos */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                  {/* Image 1: Clinical Inspections */}
+                {/* Four Working Photos: 1 Lab & 1 Chicken Founder at Top, 1 Lab & 1 Chicken Founder at Bottom */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 mb-6">
+                  {/* Row 1, Col 1: Lab Photo (founderfarm.png) */}
                   <div className="rounded-2xl overflow-hidden bg-[#0a3822] border border-emerald-800/60 group relative flex flex-col">
-                    <div className="h-52 sm:h-56 overflow-hidden relative">
+                    <div className="h-44 sm:h-48 overflow-hidden relative">
                       <img
                         src="/founderfarm.png"
                         alt="Founder conducting clinical inspections"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#072418] via-transparent to-transparent"></div>
-                      <span className="absolute bottom-2.5 left-2.5 bg-[#072418]/90 text-[#a3e635] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md border border-emerald-700/50">
+                      <span className="absolute bottom-2 left-2 bg-[#072418]/90 text-[#a3e635] text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md border border-emerald-700/50">
                         Clinical Inspections
                       </span>
                     </div>
-                    <div className="p-3.5 bg-[#0b3320]">
+                    <div className="p-3 bg-[#0b3320]">
                       <div className="text-xs font-bold text-white">Health & Instrument Checks</div>
                       <div className="text-[11px] text-emerald-200/70 mt-0.5">
                         Sanitary tools & live animal wellness audits
@@ -139,23 +139,65 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                     </div>
                   </div>
 
-                  {/* Image 2: On-Site Station Management */}
+                  {/* Row 1, Col 2: Chicken Farm Photo (chickenfounder2.png) */}
                   <div className="rounded-2xl overflow-hidden bg-[#0a3822] border border-emerald-800/60 group relative flex flex-col">
-                    <div className="h-52 sm:h-56 overflow-hidden relative">
+                    <div className="h-44 sm:h-48 overflow-hidden relative">
+                      <img
+                        src="/chickenfounder2.png"
+                        alt="Founder inspecting fresh egg harvest at the battery pens"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#072418] via-transparent to-transparent"></div>
+                      <span className="absolute bottom-2 left-2 bg-[#072418]/90 text-[#a3e635] text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md border border-emerald-700/50">
+                        Poultry Harvest
+                      </span>
+                    </div>
+                    <div className="p-3 bg-[#0b3320]">
+                      <div className="text-xs font-bold text-white">Fresh Table Egg Crates</div>
+                      <div className="text-[11px] text-emerald-200/70 mt-0.5">
+                        Direct quality grading beside laying cages
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Row 2, Col 1: Lab Photo (Founder2.png) */}
+                  <div className="rounded-2xl overflow-hidden bg-[#0a3822] border border-emerald-800/60 group relative flex flex-col">
+                    <div className="h-44 sm:h-48 overflow-hidden relative">
                       <img
                         src="/Founder2.png"
                         alt="Founder at farm desk in lab coat"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#072418] via-transparent to-transparent"></div>
-                      <span className="absolute bottom-2.5 left-2.5 bg-[#072418]/90 text-[#a3e635] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md border border-emerald-700/50">
+                      <span className="absolute bottom-2 left-2 bg-[#072418]/90 text-[#a3e635] text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md border border-emerald-700/50">
                         Daily Farm Desk
                       </span>
                     </div>
-                    <div className="p-3.5 bg-[#0b3320]">
+                    <div className="p-3 bg-[#0b3320]">
                       <div className="text-xs font-bold text-white">Direct Operational Oversight</div>
                       <div className="text-[11px] text-emerald-200/70 mt-0.5">
-                        Bio-security tracking & feed management
+                        Bio-security tracking & feed formulations
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Row 2, Col 2: Chicken Farm Photo (chickenfounder.png) */}
+                  <div className="rounded-2xl overflow-hidden bg-[#0a3822] border border-emerald-800/60 group relative flex flex-col">
+                    <div className="h-44 sm:h-48 overflow-hidden relative">
+                      <img
+                        src="/chickenfounder.png"
+                        alt="Founder inspecting poultry battery cages"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#072418] via-transparent to-transparent"></div>
+                      <span className="absolute bottom-2 left-2 bg-[#072418]/90 text-[#a3e635] text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md border border-emerald-700/50">
+                        Layer Pen Inspection
+                      </span>
+                    </div>
+                    <div className="p-3 bg-[#0b3320]">
+                      <div className="text-xs font-bold text-white">Battery Cage Supervision</div>
+                      <div className="text-[11px] text-emerald-200/70 mt-0.5">
+                        Clean pen ventilation & flock health audits
                       </div>
                     </div>
                   </div>
