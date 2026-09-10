@@ -63,10 +63,10 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                     The Journey Behind Nelson Farms
                   </h3>
                   <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
-                    Before starting Nelson Farms four years ago, our founder spent two years working hands-on at <strong>KOM Farms</strong> to gain foundational mastery in livestock husbandry, disease prevention, and commercial farm logistics.
+                    Before starting Nelson Farms four years ago, I spent two years at KOM Farms, learning the realities of livestock farming firsthand. During that time, I gained practical experience in animal husbandry, disease prevention, feed management, and the logistics required to run a successful commercial farm.
                   </p>
                   <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
-                    That two-year training period shaped the discipline that governs Nelson Farms today: strict biosecurity, honest feed management, and personal accountability for every animal raised.
+                    Those two years shaped the values that guide Nelson Farms today. They taught me the importance of strict biosecurity, responsible feed management, and taking personal accountability for every animal under my care. The discipline and lessons I gained during that period continue to influence how we operate and grow as a farm.
                   </p>
                 </div>
               </div>
