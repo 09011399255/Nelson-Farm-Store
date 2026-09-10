@@ -31,7 +31,7 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
           </h2>
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-normal">
             Combining an engineering background from The Polytechnic, Ibadan
-            with hands-on groundwork at KOM Farms to build a disciplined,
+            with hands-on groundwork at KOMO Farm to build a disciplined,
             innovative agricultural enterprise.
           </p>
         </ScrollReveal>
@@ -77,8 +77,8 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                   <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
                     I earned my National Diploma (ND) in Mechatronics
                     Engineering from The Polytechnic, Ibadan in 2017. After
-                    graduation, I gained hands-on farming experience at KOM
-                    Farms, where I developed practical knowledge in livestock
+                    graduation, I gained hands-on farming experience at KOMO
+                    Farm, where I developed practical knowledge in livestock
                     management and farm operations.
                   </p>
                   <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
@@ -103,7 +103,7 @@ export default function AboutSection({ onLearnMore, onOpenInquiry }) {
                 <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-stone-200/60">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-[#1ca350] mb-1">
                     <Clock size={14} />
-                    <span>KOM Farms</span>
+                    <span>KOMO Farm</span>
                   </div>
                   <div className="text-xs font-bold text-[#072418]">
                     Practical Training
