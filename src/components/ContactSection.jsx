@@ -40,7 +40,7 @@ export default function ContactSection() {
                 </div>
 
                 {/* Card 1: Office Address */}
-                <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/80">
+                <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl border border-stone-200 hover:border-stone-300 transition-colors">
                   <div className="flex items-center gap-3.5">
                     <div className="w-11 h-11 rounded-xl bg-emerald-50 text-[#1ca350] flex items-center justify-center flex-shrink-0 border border-emerald-100">
                       <Building2 size={20} />
@@ -64,7 +64,7 @@ export default function ContactSection() {
                     rel="noopener noreferrer"
                     title="Open Office on Google Maps"
                     aria-label="Open Office on Google Maps"
-                    className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white hover:bg-emerald-50 text-stone-500 hover:text-[#1ca350] border border-stone-200/80 flex items-center justify-center transition-all shadow-sm flex-shrink-0 group"
+                    className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-stone-50/80 hover:bg-emerald-50 text-stone-500 hover:text-[#1ca350] border border-stone-200 flex items-center justify-center transition-all shadow-sm flex-shrink-0 group"
                   >
                     <ExternalLink
                       size={17}
@@ -74,7 +74,7 @@ export default function ContactSection() {
                 </div>
 
                 {/* Card 2: Farm Address */}
-                <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/80">
+                <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl border border-stone-200 hover:border-stone-300 transition-colors">
                   <div className="flex items-center gap-3.5">
                     <div className="w-11 h-11 rounded-xl bg-emerald-50 text-[#1ca350] flex items-center justify-center flex-shrink-0 border border-emerald-100">
                       <MapPin size={20} />
@@ -98,7 +98,7 @@ export default function ContactSection() {
                     rel="noopener noreferrer"
                     title="Open Farm on Google Maps"
                     aria-label="Open Farm on Google Maps"
-                    className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white hover:bg-emerald-50 text-stone-500 hover:text-[#1ca350] border border-stone-200/80 flex items-center justify-center transition-all shadow-sm flex-shrink-0 group"
+                    className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-stone-50/80 hover:bg-emerald-50 text-stone-500 hover:text-[#1ca350] border border-stone-200 flex items-center justify-center transition-all shadow-sm flex-shrink-0 group"
                   >
                     <ExternalLink
                       size={17}
@@ -108,7 +108,7 @@ export default function ContactSection() {
                 </div>
 
                 {/* Card 3: Official Email */}
-                <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/80">
+                <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl border border-stone-200 hover:border-stone-300 transition-colors">
                   <div className="flex items-center gap-3.5 min-w-0">
                     <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center flex-shrink-0 border border-amber-200/60">
                       <Mail size={19} />
@@ -130,7 +130,7 @@ export default function ContactSection() {
                     href="mailto:nelsonfarmingstores@gmail.com"
                     title="Send Email"
                     aria-label="Send Email"
-                    className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white hover:bg-emerald-50 text-stone-500 hover:text-[#1ca350] border border-stone-200/80 flex items-center justify-center transition-all shadow-sm flex-shrink-0 group"
+                    className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-stone-50/80 hover:bg-emerald-50 text-stone-500 hover:text-[#1ca350] border border-stone-200 flex items-center justify-center transition-all shadow-sm flex-shrink-0 group"
                   >
                     <Mail
                       size={18}
@@ -140,7 +140,7 @@ export default function ContactSection() {
                 </div>
 
                 {/* Card 4: Contact Channels */}
-                <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/80">
+                <div className="flex items-center justify-between p-3.5 sm:p-4 rounded-2xl border border-stone-200 hover:border-stone-300 transition-colors">
                   <div className="flex items-center gap-3.5">
                     <div className="w-11 h-11 rounded-xl bg-[#072418]/5 text-[#072418] flex items-center justify-center flex-shrink-0 border border-stone-200/60">
                       <Phone size={19} />
@@ -187,7 +187,7 @@ export default function ContactSection() {
                 </div>
 
                 {/* Social Media Channels */}
-                <div className="p-3.5 sm:p-4 rounded-2xl bg-[#FAF8F5] border border-stone-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                <div className="p-3.5 sm:p-4 rounded-2xl border border-stone-200 hover:border-stone-300 transition-colors flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                   <div>
                     <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider block">
                       Social Channels
